@@ -1,29 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<title>Werk</title>
-<link rel="stylesheet" href="css/style.css">
-<script defer src="js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartArt Portfolio | Selim Serik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
-
 <body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">SmartArt</a>
+            <button class="nav-toggle" aria-label="Menu openen">☰</button>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="werk.html">Werk</a>
+                <a href="evaluaties.html">Evaluaties</a>
+                <a href="motivatie.html">Motivatie</a>
+            </nav>
+        </div>
+    </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="cv.html">CV</a>
-<a href="werk.html">Werk</a>
-<a href="evaluaties.html">Evaluaties</a>
-<a href="motivatie.html">Motivatie</a>
-</nav>
+    <main>
+        <section class="hero container">
+            <div class="hero-copy">
+                <p class="eyebrow">ICT-docent | Portfolio</p>
+                <h1>Digitale portfolio van Selim Serik</h1>
+                <p>Moderne presentatie van mijn professionele profiel, mijn 12,5 jaar als docent bij ROC van Twente en mijn Master of Informatics-ambities.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="motivatie.html">Ontdek mijn MoI-ambities</a>
+                    <a class="btn btn-secondary" href="evaluaties.html">Bekijk evaluaties</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <span>12,5 jaar</span>
+                    Ervaring bij ROC van Twente
+                </div>
+                <div class="hero-card">
+                    <span>Interactie</span>
+                    Evaluaties & projecten
+                </div>
+            </div>
+        </section>
 
-<section class="timeline">
-<div class="timeline-item"><h2>2024</h2><p>Examencoördinator</p></div>
-<div class="timeline-item"><h2>2019</h2><p>Docent Software Developer</p></div>
-<div class="timeline-item"><h2>2013</h2><p>Docent ICT Support</p></div>
-<div class="timeline-item"><h2>2009</h2><p>Systeembeheerder</p></div>
-<div class="timeline-item"><h2>1989</h2><p>Luchtmacht</p></div>
-</section>
+        <section class="container profile-grid">
+            <article class="profile-card">
+                <h2>Professioneel profiel</h2>
+                <p>Als ICT-docent combineer ik didactische kracht met digitale creativiteit. Ik bouw leerzame ervaringen, ondersteun collega’s en help studenten succesvol te worden met technologie in het onderwijs.</p>
+            </article>
+            <article class="profile-card highlight">
+                <h2>ROC van Twente</h2>
+                <p>12,5 jaar gedreven als docent en onderwijsontwikkelaar. Ik maak praktijkgericht onderwijs toegankelijk, versterk digitale didactiek en speel een actieve rol in professionalisering.</p>
+            </article>
+        </section>
 
+        <section class="container stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>12,5 jaar</h3>
+                    <p>Onderwijservaring</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4+ thema’s</h3>
+                    <p>Digitale innovatie, blended learning, evaluaties, professionalisering</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Master of Informatics</h3>
+                    <p>Ambitie voor verdieping in technologie en onderzoek.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container interactive-section">
+            <div class="interactive-copy">
+                <h2>Een dynamische portfolio-ervaring</h2>
+                <p>Deze website toont mijn werk, evaluaties en motivatie op een manier die op desktop, tablet en mobiel werkt.</p>
+                <div class="feature-list">
+                    <div><strong>Responsive design</strong> voor alle devices.</div>
+                    <div><strong>Interactieve evaluaties</strong> met grafieken en detailblokken.</div>
+                    <div><strong>Toekomstgerichte ambities</strong> met een duidelijke call-to-action.</div>
+                </div>
+            </div>
+            <div class="interactive-panel">
+                <h3>Projecten & documenten</h3>
+                <ul class="doc-list" id="docList"></ul>
+            </div>
+        </section>
+
+        <section class="container cta-section">
+            <div>
+                <span class="eyebrow">Master of Informatics</span>
+                <h2>Mijn volgende stap: kennis verdiepen en ICT-onderwijs versterken</h2>
+                <p>Ik richt mijn ambities op onderzoek, data-gedreven onderwijs en het vertalen van complexe informatica naar herkenbare praktijk voor studenten.</p>
+            </div>
+            <a class="btn btn-primary" href="motivatie.html">Lees mijn motivatie</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Selim Serik | ICT-docent</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="werk.html">Werk</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
