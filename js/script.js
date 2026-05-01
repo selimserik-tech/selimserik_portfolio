@@ -1,96 +1,150 @@
 /**
  * Portfolio Selim Serik 2026
- * Script voor het visualiseren van lesevaluaties via Chart.js
+ * Script voor:
+ * 1. Visualiseren van lesevaluaties via Chart.js
+ * 2. Tonen van klikbare bijlagen op bewijsstukken.html
  */
 
-const ctx = document.getElementById('myChart');
+document.addEventListener("DOMContentLoaded", function () {
 
-// De data is direct gebaseerd op Portfolio V10.4 en bijlagen 11 & 12
-const evaluationChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['BPV-Begeleiding', 'SLB-Begeleiding', 'Vakinhoudelijk/Lesgeven'],
-        datasets: [{
-            label: 'Gemiddelde Score (1-5)',
-            // 4.6 komt uit de BPV-evaluatie (Bijlage 11)
-            // 4.3 en 4.4 zijn gebaseerd op de SLB-evaluatie (Bijlage 12)
-            data: [4.6, 4.3, 4.4], 
-            backgroundColor: [
-                '#38bdf8', // Lichtblauw (Samen-Boven stijl)
-                '#0ea5e9', 
-                '#0284c7'
-            ],
-            borderColor: '#f8fafc',
-            borderWidth: 1,
-            borderRadius: 5
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: true,
-                labels: {
-                    color: 'white',
-                    font: { size: 14 }
-                }
+    /**
+     * 1. Chart.js - Lesevaluaties
+     * Deze code wordt alleen uitgevoerd als er een element met id="myChart" bestaat
+     * en Chart.js beschikbaar is.
+     */
+    const ctx = document.getElementById("myChart");
+
+    if (ctx && typeof Chart !== "undefined") {
+        const evaluationChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["BPV-Begeleiding", "SLB-Begeleiding", "Vakinhoudelijk/Lesgeven"],
+                datasets: [{
+                    label: "Gemiddelde Score (1-5)",
+                    // 4.6 komt uit de BPV-evaluatie (Bijlage 11)
+                    // 4.3 en 4.4 zijn gebaseerd op de SLB-evaluatie (Bijlage 12)
+                    data: [4.6, 4.3, 4.4],
+                    backgroundColor: [
+                        "#38bdf8",
+                        "#0ea5e9",
+                        "#0284c7"
+                    ],
+                    borderColor: "#f8fafc",
+                    borderWidth: 1,
+                    borderRadius: 5
+                }]
             },
-            tooltip: {
-                enabled: true,
-                callbacks: {
-                    // Voegt een extra regel toe aan de tooltip voor bewijsvoering
-                    afterLabel: function(context) {
-                        const labels = [
-                            'Zie Bijlage 11: BPV-Evaluatie', 
-                            'Zie Bijlage 12: SLB-Evaluatie', 
-                            'Zie Bijlage 5: Collega Feedback'
-                        ];
-                        return labels[context.dataIndex];
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            color: "white",
+                            font: { size: 14 }
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            afterLabel: function (context) {
+                                const labels = [
+                                    "Zie Bijlage 11: BPV-Evaluatie",
+                                    "Zie Bijlage 12: SLB-Evaluatie",
+                                    "Zie Bijlage 5: Collega Feedback"
+                                ];
+                                return labels[context.dataIndex];
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 5,
+                        ticks: {
+                            color: "white",
+                            stepSize: 1
+                        },
+                        grid: {
+                            color: "#334155"
+                        },
+                        title: {
+                            display: true,
+                            text: "Waardering studenten",
+                            color: "white"
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: "white",
+                            font: { weight: "bold" }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                onClick: function (e) {
+                    const points = evaluationChart.getElementsAtEventForMode(
+                        e,
+                        "nearest",
+                        { intersect: true },
+                        true
+                    );
+
+                    if (points.length) {
+                        const firstPoint = points[0];
+                        const label = evaluationChart.data.labels[firstPoint.index];
+
+                        if (label === "BPV-Begeleiding") {
+                            window.open("assets/docs/Bijlage_11_BPV_Evaluatie.pdf", "_blank");
+                        } else if (label === "SLB-Begeleiding") {
+                            window.open("assets/docs/Bijlage_12_SLB_Evaluatie.pdf", "_blank");
+                        }
                     }
                 }
             }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                max: 5,
-                ticks: { 
-                    color: 'white',
-                    stepSize: 1
-                },
-                grid: { 
-                    color: '#334155' 
-                },
-                title: {
-                    display: true,
-                    text: 'Waardering studenten',
-                    color: 'white'
-                }
-            },
-            x: {
-                ticks: { 
-                    color: 'white',
-                    font: { weight: 'bold' }
-                },
-                grid: { 
-                    display: false 
-                }
-            }
-        },
-        // Maakt de staven aanklikbaar om direct de PDF te openen
-        onClick: (e) => {
-            const points = evaluationChart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                const label = evaluationChart.data.labels[firstPoint.index];
-                
-                // Koppeling naar de mappenstructuur assets/docs/
-                if (label === 'BPV-Begeleiding') {
-                    window.open('assets/docs/Bijlage_11_BPV_Evaluatie.pdf', '_blank');
-                } else if (label === 'SLB-Begeleiding') {
-                    window.open('assets/docs/Bijlage_12_SLB_Evaluatie.pdf', '_blank');
-                }
-            }
-        }
+        });
     }
+
+
+    /**
+     * 2. Bijlage-viewer op bewijsstukken.html
+     * Deze code toont een aangeklikte bijlage in een iframe op dezelfde pagina.
+     */
+    const attachmentButtons = document.querySelectorAll(".attachment-btn");
+    const attachmentViewer = document.getElementById("attachmentViewer");
+    const selectedAttachmentTitle = document.getElementById("selectedAttachmentTitle");
+    const selectedAttachmentPath = document.getElementById("selectedAttachmentPath");
+    const viewerSection = document.getElementById("bijlage-viewer-section");
+
+    if (attachmentButtons.length && attachmentViewer && viewerSection) {
+        attachmentButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const file = button.getAttribute("data-file");
+                const title = button.getAttribute("data-title");
+
+                if (!file) {
+                    return;
+                }
+
+                attachmentViewer.src = file;
+
+                if (selectedAttachmentTitle) {
+                    selectedAttachmentTitle.textContent = title || "Geselecteerde bijlage";
+                }
+
+                if (selectedAttachmentPath) {
+                    selectedAttachmentPath.textContent = file;
+                }
+
+                viewerSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        });
+    }
+
 });
