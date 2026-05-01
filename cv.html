@@ -3,90 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Portfolio | Selim Serik</title>
+    <title>CV | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
 </head>
 <body>
-
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="/">Selim Serik</a>
         </div>
     </header>
 
-    <div class="page-layout">
+    <div class="page-layout container">
         <aside class="sidebar">
             <nav class="site-nav">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="over-mij.html">Over mij</a></li>
-                    <li><a href="cv.html" aria-current="page">CV</a></li>
+                    <li><a href="cv.html" class="active">CV</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
-                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
-                    <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- Progressbars in de Sidebar voor directe impact -->
+            <div class="skills-sidebar-block">
+                <h3>Skills</h3>
+                <div class="skill-item">
+                    <label>HTML/CSS</label>
+                    <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <label>PHP/MySQL</label>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <label>JavaScript</label>
+                    <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                </div>
+                
+                <h3 style="margin-top:1.5rem">Talen</h3>
+                <div class="skill-item">
+                    <label>Nederlands</label>
+                    <div class="progress-bar"><div class="progress lang" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <label>Turks</label>
+                    <div class="progress-bar"><div class="progress lang" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <label>Engels</label>
+                    <div class="progress-bar"><div class="progress lang" style="width: 85%;"></div></div>
+                </div>
+            </div>
         </aside>
 
         <main class="main-content">
-            <section class="hero container" style="min-height: auto; padding-top: 2rem; padding-bottom: 0;">
-                <div class="hero-copy">
-                    <p class="eyebrow">ICT-docent | Software Developer | Militaire Achtergrond</p>
-                </div>
-            </section>
-
-            <div class="container content-page">
+            <div class="content-block">
                 <h1>Curriculum Vitae</h1>
-
-                <section class="content-block">
+                <p class="cv-title">Docent ICT & Software Developer</p>
+                
+                <section style="margin-top: 2rem;">
                     <h2>Werkervaring</h2>
                     <ul class="timeline">
                         <li>
                             <h3>Examen-coördinator & Commissielid</h3>
-                            <span>2019 - Heden</span>
-                            <p>Rollen als Examen-coördinator (Hengelo), Lid Opleidingscommissie en Lid Vaststellingscommissie binnen ROC van Twente[cite: 2].</p>
+                            <span>2019 - Heden | ROC van Twente</span>
+                            <p>Verantwoordelijk voor examinering en kwaliteitsborging binnen de ICT-opleidingen[cite: 2].</p>
                         </li>
                         <li>
                             <h3>Docent Software Developer</h3>
                             <span>2019 - Heden</span>
-                            <p>Lessen in HTML, CSS, Databases, SCRUM en Rekenen. Begeleiding van stagiairs op niveau 2, 3 en 4[cite: 2].</p>
+                            <p>Onderwijs in backend en frontend development, databases en agile methodieken[cite: 2].</p>
                         </li>
                         <li>
-                            <h3>Docent Mdw. ICT Support</h3>
-                            <span>2013 - 2019</span>
-                            <p>Focus op Hardware, Servicedesk, Loopbaan & Burgerschap en BPV-begeleiding[cite: 2].</p>
-                        </li>
-                        <li>
-                            <h3>Beroepsmilitair - Koninklijke Luchtmacht</h3>
-                            <span>1989 - 2005</span>
-                            <p>Medewerker interne controle, auditing en squadronadministrateur op Vliegbasis Twente[cite: 2].</p>
+                            <h3>Beroepsmilitair</h3>
+                            <span>1989 - 2005 | Koninklijke Luchtmacht</span>
+                            <p>Interne controle, auditing en administratie op Vliegbasis Twente[cite: 2].</p>
                         </li>
                     </ul>
                 </section>
 
-                <section class="content-block">
+                <section style="margin-top: 2rem;">
                     <h2>Opleidingen & Cursussen</h2>
-                    <div class="grid-2-col">
-                        <div>
-                            <h3>Opleidingen</h3>
-                            <ul>
-                                <li>BVE-opleiding (Windesheim, 2014)[cite: 2]</li>
-                                <li>HBO Bedrijfskundige Informatica (Saxion, 2007)[cite: 2]</li>
-                                <li>HAVO / MAVO[cite: 2]</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Certificeringen</h3>
-                            <ul>
-                                <li>Scrum@school (2022)[cite: 2]</li>
-                                <li>Ethical Hacking (2021)[cite: 2]</li>
-                                <li>Projectmatig werken (2020)[cite: 2]</li>
-                                <li>Windows Server & Cognos[cite: 2]</li>
-                            </ul>
-                        </div>
+                    <div class="about-details">
+                        <div><strong>BVE-opleiding</strong> (Windesheim)[cite: 2]</div>
+                        <div><strong>HBO Informatica</strong> (Saxion)[cite: 2]</div>
+                        <div><strong>Ethical Hacking</strong> (Certificaat)[cite: 2]</div>
+                        <div><strong>Scrum@school</strong> (Certificaat)[cite: 2]</div>
                     </div>
                 </section>
             </div>
