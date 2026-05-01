@@ -3,50 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bewijsstukken | Selim Serik</title>
+    <title>Bewijsstukken | Portfolio | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
     <style>
-        .evidence-grid {
+        .evidence-layout {
             display: grid;
-            grid-template-columns: 1fr 2fr; /* Links de lijst, rechts de viewer */
-            gap: 20px;
+            grid-template-columns: 350px 1fr;
+            gap: 30px;
             margin-top: 2rem;
         }
-        .evidence-list { list-style: none; padding: 0; }
-        .evidence-link {
+
+        .document-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .doc-btn {
             display: block;
-            padding: 15px;
-            background: #f8f9fa;
-            margin-bottom: 10px;
-            border-radius: 5px;
+            padding: 12px 16px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
             text-decoration: none;
             color: #333;
-            border: 1px solid #ddd;
+            font-size: 0.9rem;
+            text-align: left;
             cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .evidence-link:hover { background: #e9ecef; border-color: var(--primary-color); }
-        
-        /* De PDF Viewer container */
-        .pdf-container {
+
+        .doc-btn:hover {
+            background: #f0f4f8;
+            border-color: #0056b3;
+            transform: translateX(5px);
+        }
+
+        .doc-btn.active {
+            background: #0056b3;
+            color: #fff;
+            border-color: #004494;
+        }
+
+        .viewer-container {
+            background: #f4f4f4;
             border: 2px solid #ddd;
             border-radius: 8px;
-            height: 800px;
-            background: #eee;
+            height: 900px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: sticky;
             top: 20px;
         }
-        iframe { width: 100%; height: 100%; border: none; border-radius: 8px; }
 
-        @media (max-width: 900px) {
-            .evidence-grid { grid-template-columns: 1fr; }
-            .pdf-container { height: 500px; }
+        #pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+        }
+
+        .placeholder-text {
+            color: #777;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .evidence-layout { grid-template-columns: 1fr; }
+            .viewer-container { height: 600px; }
         }
     </style>
 </head>
 <body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Selim Serik</a>
+        </div>
+    </header>
 
     <div class="page-layout">
         <aside class="sidebar">
@@ -54,7 +91,12 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="over-mij.html">Over mij</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
+                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
                     <li><a href="bewijsstukken.html" aria-current="page">Bewijsstukken</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </aside>
@@ -62,26 +104,49 @@
         <main class="main-content">
             <section class="container content-page">
                 <h1>Bewijsstukken</h1>
-                <p>Klik op een document om het direct hieronder te bekijken.</p>
+                <p>Klik op een document om het direct in de viewer te bekijken.</p>
 
-                <div class="evidence-grid">
-                    <!-- Linkerkolom: De lijst -->
-                    <div class="evidence-menu">
-                        <a onclick="openPDF('assets/Plan%20van%20Aanpak%20Vroegsignalering.pdf')" class="evidence-link">
-                            <strong>📄 Plan van Aanpak Vroegsignalering</strong>
-                        </a>
-                        <a onclick="openPDF('assets/360-graden-feedback-formulier.pdf')" class="evidence-link">
-                            <strong>📄 360-graden Feedback</strong>
-                        </a>
-                        <a onclick="openPDF('assets/Rapport_groep_Selimserik05_1.pdf')" class="evidence-link">
-                            <strong>📄 Groepsrapportage 05</strong>
-                        </a>
+                <div class="evidence-layout">
+                    <!-- Linkerkant: De Knoppen -->
+                    <div class="document-menu">
+                        <button class="doc-btn" onclick="viewPDF('assets/Plan van Aanpak Vroegsignalering Team Software Developer.pdf', this)">
+                            📄 Plan van Aanpak Vroegsignalering
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/360-graden-feedback-formulier - Gerald Muller.pdf', this)">
+                            📄 360-graden feedback - Gerald Muller
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/Feedback Selim door Nina Jopp.pdf', this)">
+                            📄 Feedback Selim door Nina Jopp
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/17078628473.5-Format-beoordelingsgesprek-Wendy Martens.pdf', this)">
+                            📄 Beoordelingsgesprek Wendy Martens
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/Feedbackformulier_opleidingscommissie Rudie Schreurs.pdf', this)">
+                            📄 Feedback Opleidingscommissie
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/Feedbackformulier_stagebureau Bert ten Kate.pdf', this)">
+                            📄 Feedback Stagebureau
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/Standaard gespreksleidraad 1-op-1 gesprekken – Vroegsignalering.pdf', this)">
+                            📄 Standaard Gespreksleidraad
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/Selim Serik Feedbackformulier Vaststellingscommissie Rudie Oesterholt.pdf', this)">
+                            📄 Feedback Vaststellingscommissie
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/Rapport_groep_Selimserik05_10083521pm.pdf', this)">
+                            📄 Groepsrapportage 05
+                        </button>
+                        <button class="doc-btn" onclick="viewPDF('assets/Rapport_groep_Selimserik17_10011139pm BPV-begeleider.pdf', this)">
+                            📄 Groepsrapportage 17 (BPV)
+                        </button>
                     </div>
 
-                    <!-- Rechterkolom: De viewer -->
-                    <div class="pdf-container" id="viewer-container">
-                        <p id="placeholder-text">Selecteer een document om het te bekijken</p>
-                        <iframe id="pdf-viewer" style="display:none;"></iframe>
+                    <!-- Rechterkant: De Viewer -->
+                    <div class="viewer-container">
+                        <div id="placeholder" class="placeholder-text">
+                            <p>Selecteer een document om de inhoud hier te tonen.</p>
+                        </div>
+                        <iframe id="pdf-viewer"></iframe>
                     </div>
                 </div>
             </section>
@@ -89,14 +154,24 @@
     </div>
 
     <script>
-        function openPDF(fileUrl) {
+        function viewPDF(fileUrl, btn) {
             const iframe = document.getElementById('pdf-viewer');
-            const placeholder = document.getElementById('placeholder-text');
-            
-            iframe.src = fileUrl;
-            iframe.style.display = 'block';
+            const placeholder = document.getElementById('placeholder');
+            const buttons = document.querySelectorAll('.doc-btn');
+
+            // Verwijder actieve klasse van alle knoppen en voeg toe aan huidige
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Encodeer de URL voor spaties en speciale tekens
+            const encodedUrl = encodeURI(fileUrl);
+
+            // Toon iframe en laad bestand
             placeholder.style.display = 'none';
+            iframe.style.display = 'block';
+            iframe.src = encodedUrl;
         }
     </script>
+
 </body>
 </html>
