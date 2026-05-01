@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartArt Portfolio | Selim Serik</title>
+    <title>Evaluaties | SmartArt Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer src="js/script.js"></script>
@@ -14,6 +13,12 @@
         <div class="container header-inner">
             <a class="brand" href="index.html">SmartArt</a>
             <button class="nav-toggle" aria-label="Menu openen">☰</button>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand">SmartArt</div>
             <nav class="site-nav">
                 <a href="index.html">Home</a>
                 <a href="cv.html">CV</a>
@@ -21,94 +26,33 @@
                 <a href="evaluaties.html">Evaluaties</a>
                 <a href="motivatie.html">Motivatie</a>
             </nav>
-        </div>
-    </header>
+        </aside>
 
-    <main>
-        <section class="hero container">
-            <div class="hero-copy">
-                <p class="eyebrow">ICT-docent | Portfolio</p>
-                <h1>Digitale portfolio van Selim Serik</h1>
-                <p>Moderne presentatie van mijn professionele profiel, mijn 12,5 jaar als docent bij ROC van Twente en mijn Master of Informatics-ambities.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="motivatie.html">Ontdek mijn MoI-ambities</a>
-                    <a class="btn btn-secondary" href="evaluaties.html">Bekijk evaluaties</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <span>12,5 jaar</span>
-                    Ervaring bij ROC van Twente
-                </div>
-                <div class="hero-card">
-                    <span>Interactie</span>
-                    Evaluaties & projecten
-                </div>
-            </div>
+        <main class="container content-page">
+            <h1>Lesevaluaties</h1>
+        <section class="chart-panel">
+            <canvas id="evaluationChart" aria-label="Evaluatiegrafiek" role="img"></canvas>
         </section>
 
-        <section class="container profile-grid">
-            <article class="profile-card">
-                <h2>Professioneel profiel</h2>
-                <p>Als ICT-docent combineer ik didactische kracht met digitale creativiteit. Ik bouw leerzame ervaringen, ondersteun collega’s en help studenten succesvol te worden met technologie in het onderwijs.</p>
-            </article>
-            <article class="profile-card highlight">
-                <h2>ROC van Twente</h2>
-                <p>12,5 jaar gedreven als docent en onderwijsontwikkelaar. Ik maak praktijkgericht onderwijs toegankelijk, versterk digitale didactiek en speel een actieve rol in professionalisering.</p>
-            </article>
+        <section class="content-block" id="duiding-evaluaties">
+            <h2>Toelichting evaluatieresultaten</h2>
+            <p>De grafiek toont een overzicht van de belangrijkste evaluaties uit het afgelopen jaar. Deze resultaten ondersteunen mijn rol in beroepsgericht onderwijs en geven richting aan mijn professionele ontwikkeling.</p>
+            <ul>
+                <li><strong>BPV-begeleiding (2024-2025):</strong> Gemiddelde score 4,6 op responsiviteit en ondersteuning. <span class="doc-link">Bijlage 11 beschikbaar</span></li>
+                <li><strong>SLB-docent (2025-2026):</strong> Hoog beoordeeld op vertrouwen, toegankelijkheid en coaching. <span class="doc-link">Bijlage 12 beschikbaar</span></li>
+            </ul>
         </section>
 
-        <section class="container stats-section">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h3>12,5 jaar</h3>
-                    <p>Onderwijservaring</p>
-                </div>
-                <div class="stat-card">
-                    <h3>4+ thema’s</h3>
-                    <p>Digitale innovatie, blended learning, evaluaties, professionalisering</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Master of Informatics</h3>
-                    <p>Ambitie voor verdieping in technologie en onderzoek.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="container interactive-section">
-            <div class="interactive-copy">
-                <h2>Een dynamische portfolio-ervaring</h2>
-                <p>Deze website toont mijn werk, evaluaties en motivatie op een manier die op desktop, tablet en mobiel werkt.</p>
-                <div class="feature-list">
-                    <div><strong>Responsive design</strong> voor alle devices.</div>
-                    <div><strong>Interactieve evaluaties</strong> met grafieken en detailblokken.</div>
-                    <div><strong>Toekomstgerichte ambities</strong> met een duidelijke call-to-action.</div>
-                </div>
-            </div>
-            <div class="interactive-panel">
-                <h3>Projecten & documenten</h3>
-                <ul class="doc-list" id="docList"></ul>
-            </div>
-        </section>
-
-        <section class="container cta-section">
-            <div>
-                <span class="eyebrow">Master of Informatics</span>
-                <h2>Mijn volgende stap: kennis verdiepen en ICT-onderwijs versterken</h2>
-                <p>Ik richt mijn ambities op onderzoek, data-gedreven onderwijs en het vertalen van complexe informatica naar herkenbare praktijk voor studenten.</p>
-            </div>
-            <a class="btn btn-primary" href="motivatie.html">Lees mijn motivatie</a>
+        <section class="content-block">
+            <h2>Interactie met evaluaties</h2>
+            <div class="evaluation-grid" id="evaluationGrid"></div>
         </section>
     </main>
+    </div>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>© 2026 Selim Serik | ICT-docent</p>
-            <nav class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="cv.html">CV</a>
-                <a href="werk.html">Werk</a>
-            </nav>
         </div>
     </footer>
 </body>
