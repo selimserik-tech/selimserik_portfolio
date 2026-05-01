@@ -6,7 +6,7 @@
 }
 
 .roc-logo {
-     width: 320px;
+    width: 320px;
     max-width: 100%;
     border-radius: 24px;
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
@@ -174,8 +174,10 @@ body {
     background: #f8f9fa;
 }
 
-.sidebar .site-nav a:hover {
+.sidebar .site-nav a:hover,
+.sidebar .site-nav a[aria-current="page"] {
     background: #ecf0f1;
+    color: #3498db;
 }
 
 .sidebar .site-nav .has-submenu > a {
@@ -224,6 +226,7 @@ body {
 
 .main-content {
     flex: 1;
+    min-width: 0;
 }
 
 /* Hero sectie */
@@ -249,7 +252,8 @@ body {
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 }
 
-.hero-copy .eyebrow {
+.hero-copy .eyebrow,
+.eyebrow {
     color: #3498db;
     font-weight: 600;
     text-transform: uppercase;
@@ -284,6 +288,8 @@ body {
     transition: all 0.3s;
     cursor: pointer;
     border: none;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 .btn-primary {
@@ -352,12 +358,6 @@ body {
     margin-bottom: 1rem;
 }
 
-.roc-logo {
-    width: 150px;
-    height: auto;
-    opacity: 0.8;
-}
-
 .about-content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -367,6 +367,11 @@ body {
 .about-content p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
+}
+
+.about-content a {
+    color: #3498db;
+    font-weight: 600;
 }
 
 .about-details {
@@ -405,6 +410,10 @@ body {
 .profile-card h2 {
     margin-bottom: 1rem;
     color: #2c3e50;
+}
+
+.profile-card p {
+    margin-bottom: 1rem;
 }
 
 .profile-card.highlight {
@@ -453,6 +462,10 @@ body {
     color: #2c3e50;
 }
 
+.interactive-copy p {
+    margin-bottom: 1rem;
+}
+
 .feature-list div {
     margin-bottom: 0.5rem;
     padding-left: 1rem;
@@ -485,6 +498,91 @@ body {
 .doc-list li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #ecf0f1;
+}
+
+/* Bewijsmatrix tabel */
+.table-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem 0 4rem;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.evidence-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    background: #fff;
+    overflow: hidden;
+}
+
+.evidence-table th,
+.evidence-table td {
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.evidence-table th {
+    background: #2c3e50;
+    color: #fff;
+    font-weight: 700;
+}
+
+.evidence-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.evidence-table td:first-child {
+    width: 26%;
+    color: #2c3e50;
+}
+
+.evidence-table td:nth-child(2) {
+    width: 24%;
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* Bijlageviewer */
+.attachment-btn {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.attachment-viewer-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.attachment-viewer-section .interactive-section {
+    padding: 2rem 0;
+}
+
+.attachment-frame-wrapper {
+    width: 100%;
+    min-height: 720px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(44, 62, 80, 0.08);
+}
+
+.attachment-viewer {
+    width: 100%;
+    min-height: 720px;
+    border: none;
+    display: block;
+    background: #fff;
 }
 
 /* CTA sectie */
@@ -769,6 +867,24 @@ body {
     .cards-grid {
         grid-template-columns: 1fr;
     }
+
+    .table-section {
+        padding: 1rem 0 3rem;
+    }
+
+    .evidence-table th,
+    .evidence-table td {
+        padding: 0.85rem;
+        font-size: 0.92rem;
+    }
+
+    .attachment-frame-wrapper {
+        min-height: 560px;
+    }
+
+    .attachment-viewer {
+        min-height: 560px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -794,5 +910,19 @@ body {
 
     .stat-card h3 {
         font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .attachment-frame-wrapper {
+        min-height: 480px;
+        border-radius: 10px;
+    }
+
+    .attachment-viewer {
+        min-height: 480px;
     }
 }
