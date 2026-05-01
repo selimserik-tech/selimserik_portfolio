@@ -56,7 +56,6 @@
             font-size: 0.8rem;
         }
 
-        /* Scrollbar styling voor het menu */
         .document-menu::-webkit-scrollbar { width: 6px; }
         .document-menu::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
 
@@ -100,7 +99,7 @@
                             <strong>Onderwijs:</strong> BPV Lesprogramma (20 weken)
                         </button>
                         <button class="doc-btn" onclick="openPDF('Onderzoek stagebedrijven.pdf', this)">
-                            <strong>Onderzoek:</strong> Stagebedrijven
+                            <strong>Onderzoek:</strong> Analyse Stagebedrijven
                         </button>
 
                         <!-- Categorie: Feedback & Beoordeling -->
@@ -115,6 +114,9 @@
                         </button>
 
                         <!-- Categorie: Kwaliteit & Organisatie -->
+                        <button class="doc-btn" onclick="openPDF('Feedback document vaststellingscommissie.pdf', this)">
+                            <strong>Kwaliteit:</strong> Vaststellingscommissie
+                        </button>
                         <button class="doc-btn" onclick="openPDF('Feedbackformulier_opleidingscommissie Rudie Schreurs.pdf', this)">
                             <strong>Kwaliteit:</strong> Opleidingscommissie
                         </button>
@@ -142,14 +144,11 @@
         function openPDF(fileName, btn) {
             const frame = document.getElementById('pdf-frame');
             const title = document.getElementById('viewer-title');
-            
-            // Pad naar de assets map
             const safePath = 'assets/' + encodeURIComponent(fileName);
             
             frame.src = safePath;
             title.innerText = "Document: " + fileName;
 
-            // Actieve status bijwerken
             document.querySelectorAll('.doc-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         }
