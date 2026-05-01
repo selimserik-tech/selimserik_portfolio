@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /**
      * 1. Chart.js - Lesevaluaties
-     * Deze code wordt alleen uitgevoerd als er een element met id="myChart" bestaat
-     * en Chart.js beschikbaar is.
      */
     const ctx = document.getElementById("myChart");
 
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             afterLabel: function (context) {
                                 const labels = [
                                     "Zie Bijlage 11: BPV-Evaluatie",
-                                    "Zie Bijlage 12: SLB-Evaluatie",
+                                    "Zie Bijlage 13: SLB-Evaluatie",
                                     "Zie Bijlage 5: Collega Feedback"
                                 ];
                                 return labels[context.dataIndex];
@@ -108,16 +106,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
     /**
      * 2. Bijlage-viewer op bewijsstukken.html
-     * Deze code toont een aangeklikte bijlage in een iframe op dezelfde pagina.
      */
     const attachmentButtons = document.querySelectorAll(".attachment-btn");
     const attachmentViewer = document.getElementById("attachmentViewer");
     const selectedAttachmentTitle = document.getElementById("selectedAttachmentTitle");
     const selectedAttachmentPath = document.getElementById("selectedAttachmentPath");
     const viewerSection = document.getElementById("bijlage-viewer-section");
+    const openAttachmentNewTab = document.getElementById("openAttachmentNewTab");
+
+    if (openAttachmentNewTab) {
+        openAttachmentNewTab.style.display = "none";
+    }
 
     if (attachmentButtons.length && attachmentViewer && viewerSection) {
         attachmentButtons.forEach(function (button) {
@@ -137,6 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (selectedAttachmentPath) {
                     selectedAttachmentPath.textContent = file;
+                }
+
+                if (openAttachmentNewTab) {
+                    openAttachmentNewTab.href = file;
+                    openAttachmentNewTab.style.display = "inline-block";
                 }
 
                 viewerSection.scrollIntoView({
