@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 labels: ["BPV-Begeleiding", "SLB-Begeleiding", "Vakinhoudelijk/Lesgeven"],
                 datasets: [{
                     label: "Gemiddelde Score (1-5)",
-                    // 4.6 komt uit de BPV-evaluatie (Bijlage 11)
-                    // 4.3 en 4.4 zijn gebaseerd op de SLB-evaluatie (Bijlage 12)
                     data: [4.6, 4.3, 4.4],
                     backgroundColor: [
                         "#38bdf8",
@@ -98,9 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         const label = evaluationChart.data.labels[firstPoint.index];
 
                         if (label === "BPV-Begeleiding") {
-                            window.open("assets/docs/Bijlage_11_BPV_Evaluatie.pdf", "_blank");
+                            window.open("assets/Lesevaluatie BPV-begeleider 2024-2025.pdf", "_blank");
                         } else if (label === "SLB-Begeleiding") {
-                            window.open("assets/docs/Bijlage_12_SLB_Evaluatie.pdf", "_blank");
+                            window.open("assets/Lesevaluatie SLB-docent 2025-2026.pdf", "_blank");
+                        } else if (label === "Vakinhoudelijk/Lesgeven") {
+                            window.open("assets/360-graden-feedback-formulier - Gerald Muller.pdf", "_blank");
                         }
                     }
                 }
