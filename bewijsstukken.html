@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bewijsstukken | Selim Serik</title>
+    <title>Bewijsstukken | Portfolio | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
     <style>
         .evidence-layout {
             display: grid;
@@ -68,16 +69,24 @@
 </head>
 <body>
 
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Home">Selim Serik</a>
+            <button class="nav-toggle" aria-label="Menu openen">☰</button>
+        </div>
+    </header>
+
     <div class="page-layout">
         <aside class="sidebar">
-            <nav class="site-nav">
+            <div class="sidebar-brand"></div>
+            <nav class="site-nav" aria-label="Hoofdmenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="over-mij.html">Over mij</a></li>
                     <li><a href="cv.html">CV</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
-                    <li><a href="onderzoek-innovatie.html">Onderzoek & Innovatie</a></li>
+                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
                     <li><a href="bewijsstukken.html" aria-current="page">Bewijsstukken</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -85,7 +94,14 @@
         </aside>
 
         <main class="main-content">
-            <section class="container content-page">
+            <!-- Eyebrow sectie voor visuele consistentie -->
+            <section class="hero container" style="min-height: auto; padding: 2rem 0 0 0; background: none;">
+                <div class="hero-content" style="text-align: left;">
+                    <p class="eyebrow" style="color: var(--primary-color, #333); margin-bottom: 0;">ICT-docent | Bewijsvoering | Professionalisering</p>
+                </div>
+            </section>
+
+            <section class="container content-page" style="padding-top: 1rem;">
                 <h1>Bewijsstukken</h1>
                 <p>Selecteer een document om de bewijslast direct in te zien.</p>
 
@@ -102,16 +118,18 @@
                             <strong>Onderzoek:</strong> Analyse Stagebedrijven
                         </button>
 
-                        <!-- NIEUWE CATEGORIE: Lesevaluaties -->
-                        <button class="doc-btn" onclick="openPDF('Lesevaluatie SLB-docent 2025-2026.pdf', this)">
-                            <strong>Lesevaluatie:</strong> SLB 2025-2026
+                        <!-- Lesevaluaties -->
+                        <button class="doc-btn" onclick="openPDF('Rapport_groep_Selimserik05_10083521pm.pdf', this)">
+                            <strong>Lesevaluatie:</strong> Groepsrapportage 05
                         </button>
-                        <button class="doc-btn" onclick="openPDF('Lesevaluatie SLB-docent 2024-2025.pdf', this)">
-                            <strong>Lesevaluatie:</strong> SLB 2024 - 2025
+                        <button class="doc-btn" onclick="openPDF('Rapport_groep_Selimserik06_12085625am.pdf', this)">
+                            <strong>Lesevaluatie:</strong> Groepsrapportage 06
                         </button>
-                      
-                        <button class="doc-btn" onclick="openPDF('Lesevaluatie BPV-begeleider 2024-2025.pdf', this)">
-                            <strong>Lesevaluatie:</strong> BPV-begeleider 2024-2025
+                        <button class="doc-btn" onclick="openPDF('Rapport_groep_Selimserik10_11115611am.pdf', this)">
+                            <strong>Lesevaluatie:</strong> Groepsrapportage 10
+                        </button>
+                        <button class="doc-btn" onclick="openPDF('Rapport_groep_Selimserik17_10011139pm BPV-begeleider.pdf', this)">
+                            <strong>Lesevaluatie:</strong> BPV-begeleider (17)
                         </button>
 
                         <!-- Categorie: Feedback & Beoordeling -->
@@ -148,6 +166,12 @@
             </section>
         </main>
     </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Selim Serik | ICT-docent</p>
+        </div>
+    </footer>
 
     <script>
         function openPDF(fileName, btn) {
