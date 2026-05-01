@@ -3,87 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bewijsstukken | Portfolio | Selim Serik</title>
+    <title>Bewijsstukken | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
     <style>
         .evidence-layout {
             display: grid;
             grid-template-columns: 350px 1fr;
-            gap: 30px;
+            gap: 20px;
             margin-top: 2rem;
         }
 
         .document-menu {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .doc-btn {
             display: block;
-            padding: 12px 16px;
+            padding: 12px;
             background: #fff;
             border: 1px solid #ddd;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #333;
-            font-size: 0.9rem;
+            border-radius: 5px;
             text-align: left;
             cursor: pointer;
-            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            transition: all 0.2s;
         }
 
-        .doc-btn:hover {
-            background: #f0f4f8;
-            border-color: #0056b3;
-            transform: translateX(5px);
-        }
-
-        .doc-btn.active {
-            background: #0056b3;
-            color: #fff;
-            border-color: #004494;
-        }
+        .doc-btn:hover { background: #f0f7ff; border-color: #0056b3; }
+        .doc-btn.active { background: #0056b3; color: #fff; }
 
         .viewer-container {
-            background: #f4f4f4;
             border: 2px solid #ddd;
             border-radius: 8px;
-            height: 900px;
+            height: 800px;
+            background: #f9f9f9;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            position: sticky;
-            top: 20px;
+            flex-direction: column;
         }
 
-        #pdf-viewer {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: none;
+        iframe { width: 100%; height: 100%; border: none; border-radius: 0 0 8px 8px; }
+        
+        .viewer-header {
+            padding: 10px;
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            font-size: 0.8rem;
         }
 
-        .placeholder-text {
-            color: #777;
-            text-align: center;
-            padding: 20px;
-        }
-
-        @media (max-width: 1024px) {
+        @media (max-width: 1000px) {
             .evidence-layout { grid-template-columns: 1fr; }
-            .viewer-container { height: 600px; }
+            .viewer-container { height: 500px; }
         }
     </style>
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="index.html">Selim Serik</a>
-        </div>
-    </header>
 
     <div class="page-layout">
         <aside class="sidebar">
@@ -91,12 +67,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="over-mij.html">Over mij</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
-                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
                     <li><a href="bewijsstukken.html" aria-current="page">Bewijsstukken</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </aside>
@@ -104,49 +75,40 @@
         <main class="main-content">
             <section class="container content-page">
                 <h1>Bewijsstukken</h1>
-                <p>Klik op een document om het direct in de viewer te bekijken.</p>
+                <p>Klik op een document om het direct hiernaast te bekijken.</p>
 
                 <div class="evidence-layout">
-                    <!-- Linkerkant: De Knoppen -->
                     <div class="document-menu">
-                        <button class="doc-btn" onclick="viewPDF('assets/Plan van Aanpak Vroegsignalering Team Software Developer.pdf', this)">
-                            📄 Plan van Aanpak Vroegsignalering
+                        <!-- Bestandsnamen zijn nu EXACT zoals in je screenshot -->
+                        <button class="doc-btn" onclick="openPDF('Plan van Aanpak Vroegsignalering Team Software Developer.pdf', this)">
+                            Plan van Aanpak Vroegsignalering
                         </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/360-graden-feedback-formulier - Gerald Muller.pdf', this)">
-                            📄 360-graden feedback - Gerald Muller
+                        <button class="doc-btn" onclick="openPDF('360-graden-feedback-formulier - Gerald Muller.pdf', this)">
+                            360-graden feedback - Gerald Muller
                         </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/Feedback Selim door Nina Jopp.pdf', this)">
-                            📄 Feedback Selim door Nina Jopp
+                        <button class="doc-btn" onclick="openPDF('Feedback Selim door Nina Jopp.pdf', this)">
+                            Feedback door Nina Jopp
                         </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/17078628473.5-Format-beoordelingsgesprek-Wendy Martens.pdf', this)">
-                            📄 Beoordelingsgesprek Wendy Martens
+                        <button class="doc-btn" onclick="openPDF('Feedbackformulier_opleidingscommissie Rudie Schreurs.pdf', this)">
+                            Feedback Opleidingscommissie
                         </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/Feedbackformulier_opleidingscommissie Rudie Schreurs.pdf', this)">
-                            📄 Feedback Opleidingscommissie
+                        <button class="doc-btn" onclick="openPDF('Feedbackformulier_stagebureau Bert ten Kate.pdf', this)">
+                            Feedback Stagebureau
                         </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/Feedbackformulier_stagebureau Bert ten Kate.pdf', this)">
-                            📄 Feedback Stagebureau
+                        <button class="doc-btn" onclick="openPDF('Rapport_groep_Selimserik05_10083521pm.pdf', this)">
+                            Groepsrapportage 05
                         </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/Standaard gespreksleidraad 1-op-1 gesprekken – Vroegsignalering.pdf', this)">
-                            📄 Standaard Gespreksleidraad
+                        <button class="doc-btn" onclick="openPDF('Standaard gespreksleidraad 1-op-1 gesprekken – Vroegsignalering.pdf', this)">
+                            Standaard gespreksleidraad
                         </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/Selim Serik Feedbackformulier Vaststellingscommissie Rudie Oesterholt.pdf', this)">
-                            📄 Feedback Vaststellingscommissie
-                        </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/Rapport_groep_Selimserik05_10083521pm.pdf', this)">
-                            📄 Groepsrapportage 05
-                        </button>
-                        <button class="doc-btn" onclick="viewPDF('assets/Rapport_groep_Selimserik17_10011139pm BPV-begeleider.pdf', this)">
-                            📄 Groepsrapportage 17 (BPV)
+                        <button class="doc-btn" onclick="openPDF('17078628473.5-Format-beoordelingsgesprek-Wendy Martens.pdf', this)">
+                            Beoordelingsgesprek Wendy Martens
                         </button>
                     </div>
 
-                    <!-- Rechterkant: De Viewer -->
                     <div class="viewer-container">
-                        <div id="placeholder" class="placeholder-text">
-                            <p>Selecteer een document om de inhoud hier te tonen.</p>
-                        </div>
-                        <iframe id="pdf-viewer"></iframe>
+                        <div class="viewer-header" id="viewer-title">Selecteer een bestand</div>
+                        <iframe id="pdf-frame" src=""></iframe>
                     </div>
                 </div>
             </section>
@@ -154,24 +116,20 @@
     </div>
 
     <script>
-        function viewPDF(fileUrl, btn) {
-            const iframe = document.getElementById('pdf-viewer');
-            const placeholder = document.getElementById('placeholder');
-            const buttons = document.querySelectorAll('.doc-btn');
+        function openPDF(fileName, btn) {
+            const frame = document.getElementById('pdf-frame');
+            const title = document.getElementById('viewer-title');
+            
+            // We gebruiken encodeURIComponent om de spaties en vreemde tekens (zoals de –) veilig te maken voor de browser
+            const safePath = 'assets/' + encodeURIComponent(fileName);
+            
+            frame.src = safePath;
+            title.innerText = "Bezig met laden: " + fileName;
 
-            // Verwijder actieve klasse van alle knoppen en voeg toe aan huidige
-            buttons.forEach(b => b.classList.remove('active'));
+            // Knop op actief zetten
+            document.querySelectorAll('.doc-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            // Encodeer de URL voor spaties en speciale tekens
-            const encodedUrl = encodeURI(fileUrl);
-
-            // Toon iframe en laad bestand
-            placeholder.style.display = 'none';
-            iframe.style.display = 'block';
-            iframe.src = encodedUrl;
         }
     </script>
-
 </body>
 </html>
