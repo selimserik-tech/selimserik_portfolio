@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1 Interpersoonlijk | SmartArt Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">SmartArt</a>
+            <button class="nav-toggle" aria-label="Menu openen">☰</button>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="werk.html">Werk</a>
+                <a href="evaluaties.html">Evaluaties</a>
+                <a href="motivatie.html">Motivatie</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container content-page">
+        <h1>3.1 Interpersoonlijk</h1>
+        <section class="content-block">
+            <h2>Interpersoonlijke competenties</h2>
+            <p>In deze pagina beschrijf ik mijn persoonlijke waarde in samenwerking met studenten, collega's en de omgeving. Interpersoonlijk gedrag omvat vertrouwen, respect, open communicatie en het aanvoelen van gedragsdynamiek.</p>
+            <p>Voorbeeldpunten:</p>
+            <ul>
+                <li>Actief luisteren naar studenten en collega’s.</li>
+                <li>Open en respectvolle communicatie in teams.</li>
+                <li>Constructieve feedback geven en ontvangen.</li>
+                <li>Ruimte creëren voor samenwerking en betrokkenheid.</li>
+                <li>Relaties opbouwen met een duidelijke professionele houding.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Toepassing in het onderwijs</h2>
+            <p>Mijn interpersoonlijke aanpak helpt studenten zich veilig en gemotiveerd te voelen. Ik zorg dat iedereen gehoord wordt en werk samen met collega’s om een positieve leeromgeving te bouwen.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Selim Serik | ICT-docent</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="werk.html">Werk</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
