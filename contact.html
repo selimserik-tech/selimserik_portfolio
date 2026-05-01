@@ -3,93 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Portfolio</title>
+  <title>Contact | Portfolio van Selim Serik</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">Selim</a>
+      <a href="index.html" class="brand">Selim Serik</a>
+    </div>
+  </header>
 
-      <button class="nav-toggle" aria-label="Navigatie openen">☰</button>
-
+  <div class="page-layout">
+    <aside class="sidebar">
       <nav class="site-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="over-mij.html">Over mij</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="cv.html">CV</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
+          <li><a href="onderzoek-innovatie.html">Onderzoek &amp; innovatie</a></li>
+          <li><a href="bewijstukken.html">Bewijsstukken</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
+    </aside>
 
-  <main class="content-page">
-    <div class="container">
-      <h1>Contact</h1>
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Contact | Samenwerken | Vragen</p>
+          <h1>Neem contact met mij op</h1>
+          <p>
+            Heb je een vraag over mijn portfolio, mijn rol als ICT-docent of mijn werkzaamheden rondom
+            studentbegeleiding, BPV, examinering of onderwijsontwikkeling? Stuur gerust een bericht.
+          </p>
 
-      <section class="content-block">
-        <h2>Neem contact met mij op</h2>
-        <p>
-          Heb je een vraag over mijn portfolio, mijn ontwikkeling als docent of wil je samenwerken?
-          Stuur gerust een bericht. Ik reageer zo snel mogelijk.
-        </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:jouwemail@example.com">Stuur een e-mail</a>
+            <a class="btn btn-secondary" href="portfolio.html">Bekijk mijn portfolio</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <span>Contact</span>
+            <p>Voor vragen over mijn portfolio</p>
+          </div>
+
+          <div class="hero-card">
+            <span>Onderwijs</span>
+            <p>ICT-onderwijs, SLB en BPV-begeleiding</p>
+          </div>
+
+          <div class="hero-card">
+            <span>Samenwerking</span>
+            <p>Onderwijsontwikkeling en kwaliteitszorg</p>
+          </div>
+        </div>
       </section>
 
-      <section class="cards-grid">
-        <article class="project-card">
-          <h3>Contactgegevens</h3>
-          <p><strong>Naam:</strong> Selim [Achternaam]</p>
+      <section class="profile-grid">
+        <article class="profile-card highlight">
+          <h2>Contactgegevens</h2>
+          <p><strong>Naam:</strong> Selim Serik</p>
           <p><strong>E-mail:</strong> <a href="mailto:jouwemail@example.com">jouwemail@example.com</a></p>
           <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">linkedin.com/in/jouwprofiel</a></p>
           <p><strong>Locatie:</strong> Nederland</p>
         </article>
 
-        <article class="project-card">
-          <h3>Bericht sturen</h3>
+        <article class="profile-card">
+          <h2>Waarvoor kun je contact opnemen?</h2>
           <p>
-            Vul hieronder je gegevens in en laat kort weten waar je contact over wilt opnemen.
+            Je kunt contact opnemen voor vragen over mijn portfolio, feedback op bewijstukken,
+            samenwerking binnen ICT-onderwijs of onderwerpen rondom studentbegeleiding en BPV.
           </p>
-
-          <form action="#" method="post">
-            <p>
-              <label for="name"><strong>Naam</strong></label><br />
-              <input type="text" id="name" name="name" placeholder="Jouw naam" required />
-            </p>
-
-            <p>
-              <label for="email"><strong>E-mailadres</strong></label><br />
-              <input type="email" id="email" name="email" placeholder="jij@example.com" required />
-            </p>
-
-            <p>
-              <label for="subject"><strong>Onderwerp</strong></label><br />
-              <input type="text" id="subject" name="subject" placeholder="Waar gaat je bericht over?" />
-            </p>
-
-            <p>
-              <label for="message"><strong>Bericht</strong></label><br />
-              <textarea id="message" name="message" placeholder="Typ hier je bericht..." required></textarea>
-            </p>
-
-            <button class="btn btn-primary" type="submit">Verstuur bericht</button>
-          </form>
+          <p>
+            Ik reageer zo snel mogelijk en denk graag mee vanuit een praktische en onderwijsgerichte blik.
+          </p>
         </article>
       </section>
-    </div>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Selim. Alle rechten voorbehouden.</p>
+      <section class="content-block">
+        <h2>Bericht sturen</h2>
+        <p>
+          Vul hieronder je gegevens in en laat kort weten waar je bericht over gaat.
+        </p>
 
-      <nav class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </footer>
+        <form action="#" method="post">
+          <p>
+            <label for="name"><strong>Naam</strong></label><br />
+            <input type="text" id="name" name="name" placeholder="Jouw naam" required />
+          </p>
+
+          <p>
+            <label for="email"><strong>E-mailadres</strong></label><br />
+            <input type="email" id="email" name="email" placeholder="jij@example.com" required />
+          </p>
+
+          <p>
+            <label for="subject"><strong>Onderwerp</strong></label><br />
+            <input type="text" id="subject" name="subject" placeholder="Waar gaat je bericht over?" />
+          </p>
+
+          <p>
+            <label for="message"><strong>Bericht</strong></label><br />
+            <textarea id="message" name="message" placeholder="Typ hier je bericht..." required></textarea>
+          </p>
+
+          <button class="btn btn-primary" type="submit">Verstuur bericht</button>
+        </form>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
