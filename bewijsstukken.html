@@ -17,6 +17,9 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            max-height: 800px;
+            overflow-y: auto;
+            padding-right: 10px;
         }
 
         .doc-btn {
@@ -32,7 +35,7 @@
         }
 
         .doc-btn:hover { background: #f0f7ff; border-color: #0056b3; }
-        .doc-btn.active { background: #0056b3; color: #fff; }
+        .doc-btn.active { background: #0056b3; color: #fff; border-color: #0056b3; }
 
         .viewer-container {
             border: 2px solid #ddd;
@@ -53,9 +56,14 @@
             font-size: 0.8rem;
         }
 
+        /* Scrollbar styling voor het menu */
+        .document-menu::-webkit-scrollbar { width: 6px; }
+        .document-menu::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
         @media (max-width: 1000px) {
             .evidence-layout { grid-template-columns: 1fr; }
             .viewer-container { height: 500px; }
+            .document-menu { max-height: none; }
         }
     </style>
 </head>
@@ -67,7 +75,12 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="over-mij.html">Over mij</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
+                    <li><a href="onderzoek-innovatie.html">Onderzoek & Innovatie</a></li>
                     <li><a href="bewijsstukken.html" aria-current="page">Bewijsstukken</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </aside>
@@ -75,39 +88,49 @@
         <main class="main-content">
             <section class="container content-page">
                 <h1>Bewijsstukken</h1>
-                <p>Klik op een document om het direct hiernaast te bekijken.</p>
+                <p>Selecteer een document om de bewijslast direct in te zien.</p>
 
                 <div class="evidence-layout">
                     <div class="document-menu">
-                        <!-- Bestandsnamen zijn nu EXACT zoals in je screenshot -->
+                        <!-- Categorie: Beleid & Ontwikkeling -->
                         <button class="doc-btn" onclick="openPDF('Plan van Aanpak Vroegsignalering Team Software Developer.pdf', this)">
-                            Plan van Aanpak Vroegsignalering
+                            <strong>Beleid:</strong> PvA Vroegsignalering
                         </button>
+                        <button class="doc-btn" onclick="openPDF('BPV-Lesprogramma-20-weken.pdf', this)">
+                            <strong>Onderwijs:</strong> BPV Lesprogramma (20 weken)
+                        </button>
+                        <button class="doc-btn" onclick="openPDF('Onderzoek-Stagebedrijven-SD.pdf', this)">
+                            <strong>Onderzoek:</strong> Analyse 38 Stagebedrijven
+                        </button>
+
+                        <!-- Categorie: Feedback & Beoordeling -->
                         <button class="doc-btn" onclick="openPDF('360-graden-feedback-formulier - Gerald Muller.pdf', this)">
-                            360-graden feedback - Gerald Muller
+                            <strong>Feedback:</strong> 360° Gerald Muller
                         </button>
                         <button class="doc-btn" onclick="openPDF('Feedback Selim door Nina Jopp.pdf', this)">
-                            Feedback door Nina Jopp
-                        </button>
-                        <button class="doc-btn" onclick="openPDF('Feedbackformulier_opleidingscommissie Rudie Schreurs.pdf', this)">
-                            Feedback Opleidingscommissie
-                        </button>
-                        <button class="doc-btn" onclick="openPDF('Feedbackformulier_stagebureau Bert ten Kate.pdf', this)">
-                            Feedback Stagebureau
-                        </button>
-                        <button class="doc-btn" onclick="openPDF('Rapport_groep_Selimserik05_10083521pm.pdf', this)">
-                            Groepsrapportage 05
-                        </button>
-                        <button class="doc-btn" onclick="openPDF('Standaard gespreksleidraad 1-op-1 gesprekken – Vroegsignalering.pdf', this)">
-                            Standaard gespreksleidraad
+                            <strong>Feedback:</strong> Nina Jopp (Teamdeskundige)
                         </button>
                         <button class="doc-btn" onclick="openPDF('17078628473.5-Format-beoordelingsgesprek-Wendy Martens.pdf', this)">
-                            Beoordelingsgesprek Wendy Martens
+                            <strong>Beoordeling:</strong> Gesprek Wendy Martens
+                        </button>
+
+                        <!-- Categorie: Kwaliteit & Organisatie -->
+                        <button class="doc-btn" onclick="openPDF('Feedbackformulier_opleidingscommissie Rudie Schreurs.pdf', this)">
+                            <strong>Kwaliteit:</strong> Opleidingscommissie
+                        </button>
+                        <button class="doc-btn" onclick="openPDF('Feedbackformulier_stagebureau Bert ten Kate.pdf', this)">
+                            <strong>Kwaliteit:</strong> Stagebureau
+                        </button>
+                        <button class="doc-btn" onclick="openPDF('Rapport_groep_Selimserik05_10083521pm.pdf', this)">
+                            <strong>Rapportage:</strong> Groepsrapportage 05
+                        </button>
+                        <button class="doc-btn" onclick="openPDF('Standaard gespreksleidraad 1-op-1 gesprekken – Vroegsignalering.pdf', this)">
+                            <strong>Tool:</strong> Gespreksleidraad 1-op-1
                         </button>
                     </div>
 
                     <div class="viewer-container">
-                        <div class="viewer-header" id="viewer-title">Selecteer een bestand</div>
+                        <div class="viewer-header" id="viewer-title">Selecteer een bestand uit de lijst</div>
                         <iframe id="pdf-frame" src=""></iframe>
                     </div>
                 </div>
@@ -120,13 +143,13 @@
             const frame = document.getElementById('pdf-frame');
             const title = document.getElementById('viewer-title');
             
-            // We gebruiken encodeURIComponent om de spaties en vreemde tekens (zoals de –) veilig te maken voor de browser
+            // Pad naar de assets map
             const safePath = 'assets/' + encodeURIComponent(fileName);
             
             frame.src = safePath;
-            title.innerText = "Bezig met laden: " + fileName;
+            title.innerText = "Document: " + fileName;
 
-            // Knop op actief zetten
+            // Actieve status bijwerken
             document.querySelectorAll('.doc-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         }
