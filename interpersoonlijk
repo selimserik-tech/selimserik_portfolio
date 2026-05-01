@@ -11,46 +11,60 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html">SmartArt</a>
-            <button class="nav-toggle" aria-label="Menu openen">☰</button>
-            <nav class="site-nav">
-                <a href="index.html">Home</a>
-                <a href="cv.html">CV</a>
-                <a href="werk.html">Werk</a>
-                <a href="evaluaties.html">Evaluaties</a>
-                <a href="motivatie.html">Motivatie</a>
-            </nav>
         </div>
     </header>
 
-    <main class="container content-page">
-        <h1>3.1 Interpersoonlijk</h1>
-        <section class="content-block">
-            <h2>Interpersoonlijke competenties</h2>
-            <p>In deze pagina beschrijf ik mijn persoonlijke waarde in samenwerking met studenten, collega's en de omgeving. Interpersoonlijk gedrag omvat vertrouwen, respect, open communicatie en het aanvoelen van gedragsdynamiek.</p>
-            <p>Voorbeeldpunten:</p>
-            <ul>
-                <li>Actief luisteren naar studenten en collega’s.</li>
-                <li>Open en respectvolle communicatie in teams.</li>
-                <li>Constructieve feedback geven en ontvangen.</li>
-                <li>Ruimte creëren voor samenwerking en betrokkenheid.</li>
-                <li>Relaties opbouwen met een duidelijke professionele houding.</li>
-            </ul>
-        </section>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand">SmartArt</div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#inleiding">1. Inleiding</a></li>
+                    <li><a href="#profiel">2. Professioneel profiel</a></li>
+                    <li class="has-submenu">
+                        <a href="#competenties" class="submenu-toggle" aria-expanded="false">3. SBL-competenties</a>
+                        <ul class="submenu">
+                            <li><a href="interpersoonlijk.html">3.1 Interpersoonlijk</a></li>
+                            <li><a href="#c32">3.2 Pedagogisch</a></li>
+                            <li><a href="#c33">3.3 Vakinhoudelijk</a></li>
+                            <li><a href="#c34">3.4 Organisatorisch</a></li>
+                            <li><a href="#c35">3.5 Samenwerken collega's</a></li>
+                            <li><a href="#c36">3.6 Samenwerken omgeving</a></li>
+                            <li><a href="#c37">3.7 Reflectie & Ontwikkeling</a></li>
+                            <li><a href="#c38">3.8 BPV-lesprogramma</a></li>
+                            <li><a href="#c39">3.9 Master (MoI)</a></li>
+                            <li><a href="#c310">3.10 Roos van Leary</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#feedback">4. 360-graden feedback</a></li>
+                    <li><a href="#pop">5. POP</a></li>
+                    <li><a href="#conclusie">6. Conclusie</a></li>
+                    <li><a href="#matrix">7. Bewijsmatrix</a></li>
+                    <li><a href="#bijlagen">8. Bijlagenlijst</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-        <section class="content-block">
-            <h2>Toepassing in het onderwijs</h2>
-            <p>Mijn interpersoonlijke aanpak helpt studenten zich veilig en gemotiveerd te voelen. Ik zorg dat iedereen gehoord wordt en werk samen met collega’s om een positieve leeromgeving te bouwen.</p>
-        </section>
-    </main>
+        <main class="main-content">
+            <section class="container content-page">
+                <h1>3.1 Interpersoonlijk</h1>
+                <section class="content-block">
+                    <p>Ik werk bewust aan een open, veilige en respectvolle relatie met studenten en collega’s. Studenten moeten mij kunnen benaderen wanneer zij vragen hebben, vastlopen of extra begeleiding nodig hebben. In mijn communicatie probeer ik duidelijk, rustig en betrouwbaar te zijn. Deze houding helpt mij om signalen vroeg op te pikken en studenten op tijd in beweging te krijgen.</p>
+                    <p>Uit de feedback blijkt dat ik prettig ben in de omgang, respectvol communiceer en sterk gericht ben op samenwerking. Gerald Muller beschrijft mij als een prettige collega die samenwerkt met het doel het beste voor de student te bereiken. Ook wordt genoemd dat ik professioneel handel naar collega’s, studenten en derden (zie bijlage 5 - Feedback Gerald Muller). Mijn interpersoonlijke competentie komt daarnaast duidelijk naar voren in de feedback van Nina Jopp. Zij benoemt dat studenten mij op een natuurlijke manier benaderen en mij weten te vinden bij hulpvragen. Ook ziet zij dat ik de juiste toon weet te vinden in gesprekken, ook wanneer het om moeilijk nieuws gaat of wanneer een student minder prettig gedrag vertoont (zie bijlage 6 - Feedback Nina Jopp).</p>
+                </section>
+                <section class="content-block">
+                    <h2>Duiding via de Roos van Leary</h2>
+                    <p>De Standaard gespreksleidraad sluit hierop aan. In deze leidraad is veel aandacht voor een veilige opening, open vragen, luisteren zonder oordeel en het samen maken van afspraken. De lesevaluatie SLB-docent bevestigt deze interpersoonlijke basis vanuit studentperspectief: studenten waarderen vooral dat zij mij in vertrouwen kunnen nemen en dat zij het gevoel hebben altijd naar mij toe te kunnen gaan.</p>
+                    <p>Op basis van de lesevaluaties (bijlage 11 en 12) kan ik mijn interpersoonlijke stijl scherper duiden via de Roos van Leary. In de SLB-evaluatie waarderen studenten het vertrouwen en de hulpvaardigheid, wat duidt op Samen-gedrag: studenten voelen zich veilig om mij te benaderen. Tegelijkertijd blijf ik niet passief volgend, maar geef ik richting aan gesprekken en afspraken. Dit plaatst mij in het kwadrant Samen-Boven (Helpend/Leidend). Ik bied nabijheid en ondersteuning, maar blijf gericht op ontwikkeling en actie.</p>
+                    <p>Reflectie: mijn kracht ligt in verbinding maken en vertrouwen opbouwen. Mijn aandachtspunt blijft om, naast betrokkenheid, steeds voldoende professionele afstand te houden en studenten zo veel mogelijk zelf eigenaar te maken van hun ontwikkeling.</p>
+                </section>
+            </section>
+        </main>
+    </div>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>© 2026 Selim Serik | ICT-docent</p>
-            <nav class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="cv.html">CV</a>
-                <a href="werk.html">Werk</a>
-            </nav>
         </div>
     </footer>
 </body>
