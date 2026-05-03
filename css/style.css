@@ -53,16 +53,16 @@ button:focus-visible,
 }
 
 /* =========================================================
-   Grid met 2 kolommen voor grotere schermen, 1 voor mobiel
+   Grid met 4 kolommen voor grotere schermen, 1 voor mobiel
 ========================================================= */
 
 .four-column-grid {
-    max-width: 900px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 4rem 1.5rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 kolommen voor grotere schermen */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
     align-items: stretch;
 }
@@ -98,11 +98,10 @@ button:focus-visible,
     border-left: 4px solid #3498db;
 }
 
-/* Tablet en kleinere laptops: 2 bij 2 behouden */
+/* Tablet en kleinere laptops: 4 kolommen behouden */
 @media (max-width: 1100px) {
     .four-column-grid {
-        max-width: 900px;
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 kolommen voor tablets en laptops */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.5rem;
         padding: 3rem 1.5rem;
     }
@@ -119,7 +118,7 @@ button:focus-visible,
 /* Mobiel: kaarten onder elkaar */
 @media (max-width: 768px) {
     .four-column-grid {
-        grid-template-columns: 1fr; /* 1 kolom voor mobiel */
+        grid-template-columns: 1fr;
         max-width: 100%;
         padding: 2rem 1rem;
         gap: 1.5rem;
