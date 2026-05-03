@@ -139,6 +139,22 @@ body {
     align-self: flex-start;
 }
 
+/* Afbeelding boven de menubalk */
+.sidebar-profile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    display: block;
+}
+
 .sidebar-brand {
     font-size: 1.25rem;
     font-weight: 700;
@@ -806,6 +822,11 @@ body {
         overflow: visible;
     }
 
+    .sidebar-photo {
+        width: 150px;
+        height: 150px;
+    }
+
     .page-layout {
         flex-wrap: wrap;
     }
@@ -915,6 +936,12 @@ body {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .sidebar-photo {
+        width: 140px;
+        height: 140px;
+        border-radius: 20px;
     }
 
     .attachment-frame-wrapper {
