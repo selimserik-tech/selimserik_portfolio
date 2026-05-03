@@ -3,6 +3,7 @@
  * Script voor:
  * 1. Visualiseren van lesevaluaties via Chart.js
  * 2. Tonen van klikbare bijlagen op bewijsstukken.html
+ * 3. Menu toggle voor mobiel
  */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -150,6 +151,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     block: "start"
                 });
             });
+        });
+    }
+
+    /**
+     * 3. Mobile Menu Toggle
+     * Open en sluit het mobiele menu bij klikken op de nav-toggle knop
+     */
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
+            siteNav.classList.toggle('active');
         });
     }
 
