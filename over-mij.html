@@ -34,9 +34,40 @@
             margin-bottom: 0.5rem;
         }
 
+        .style-values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .style-values-text {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .leary-image-wrapper {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            padding: 1rem;
+        }
+
+        .leary-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+
         @media (max-width: 1100px) {
             .four-column-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .style-values-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -127,26 +158,34 @@
                             </p>
                         </div>
 
-                        <div class="profile-subsection">
-                            <h3>Duiding van mijn stijl</h3>
-                            <ul>
-                                <li><strong>Leidend:</strong> overzicht, kaders, voortgang en afspraken.</li>
-                                <li><strong>Helpend:</strong> nabijheid, ondersteuning en vertrouwen.</li>
-                                <li><strong>Samen-as:</strong> toegankelijkheid en verbinding.</li>
-                                <li><strong>Boven-as:</strong> structuur, regie en procesbewaking.</li>
-                                <li><strong>Ontwikkelpunt:</strong> vaker coachend loslaten.</li>
-                            </ul>
-                        </div>
+                        <div class="style-values-grid">
+                            <div class="style-values-text">
+                                <div class="profile-subsection">
+                                    <h3>Duiding van mijn stijl</h3>
+                                    <ul>
+                                        <li><strong>Leidend:</strong> overzicht, kaders, voortgang en afspraken.</li>
+                                        <li><strong>Helpend:</strong> nabijheid, ondersteuning en vertrouwen.</li>
+                                        <li><strong>Samen-as:</strong> toegankelijkheid en verbinding.</li>
+                                        <li><strong>Boven-as:</strong> structuur, regie en procesbewaking.</li>
+                                        <li><strong>Ontwikkelpunt:</strong> vaker coachend loslaten.</li>
+                                    </ul>
+                                </div>
 
-                        <div class="profile-subsection">
-                            <h3>Kernwaarden</h3>
-                            <ul>
-                                <li>Betrokken en toegankelijk.</li>
-                                <li>Duidelijk en gestructureerd.</li>
-                                <li>Studentgericht en ontwikkelingsgericht.</li>
-                                <li>Kwaliteitsgericht en onderzoekend.</li>
-                                <li>Verbindend richting collega’s en werkveld.</li>
-                            </ul>
+                                <div class="profile-subsection">
+                                    <h3>Kernwaarden</h3>
+                                    <ul>
+                                        <li>Betrokken en toegankelijk.</li>
+                                        <li>Duidelijk en gestructureerd.</li>
+                                        <li>Studentgericht en ontwikkelingsgericht.</li>
+                                        <li>Kwaliteitsgericht en onderzoekend.</li>
+                                        <li>Verbindend richting collega’s en werkveld.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="leary-image-wrapper">
+                                <img src="assets/roos van Leary.jpg" alt="Roos van Leary model met vier kwadranten" class="leary-image">
+                            </div>
                         </div>
                     </div>
                 </div>
