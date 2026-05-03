@@ -6,6 +6,27 @@
     <title>Over mij | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+
+    <style>
+        .four-column-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        @media (max-width: 1100px) {
+            .four-column-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .four-column-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -17,17 +38,22 @@
 
     <div class="page-layout">
         <aside class="sidebar">
+
+            <div class="sidebar-profile">
+                <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
+            </div>
+
             <div class="sidebar-brand"></div>
 
             <nav class="site-nav" aria-label="Hoofdmenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="over-mij.html" aria-current="page">Over mij</a></li>
-                    <li><a href="cv.html">CV</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
                     <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
                     <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
+                    <li><a href="cv.html">CV</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -99,7 +125,7 @@
                 </div>
             </section>
 
-            <section class="container profile-grid">
+            <section class="container four-column-grid">
                 <article class="profile-card">
                     <h2>Mijn rol als docent</h2>
                     <p>
