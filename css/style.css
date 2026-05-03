@@ -512,7 +512,8 @@ button:focus-visible,
 }
 
 .profile-card.highlight {
-    border-left: 4px solid #3498db;
+      padding: 1.25rem;
+        border-radius: 10px;
 }
 
 /* =========================================================
