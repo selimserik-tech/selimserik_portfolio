@@ -118,6 +118,7 @@ body {
     color: #3498db;
 }
 
+/* Pagina-indeling */
 .page-layout {
     display: flex;
     gap: 2rem;
@@ -135,8 +136,11 @@ body {
     padding: 1.25rem 1rem;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+    /* Menu blijft vast staan tijdens scrollen */
     position: sticky;
-    top: 1rem;
+    top: 5.5rem;
+    z-index: 90;
     align-self: flex-start;
 }
 
@@ -835,6 +839,10 @@ body {
         display: flex;
     }
 
+    .page-layout {
+        flex-wrap: wrap;
+    }
+
     .sidebar {
         width: 100%;
         min-width: auto;
@@ -857,10 +865,6 @@ body {
     .sidebar .site-nav a {
         padding: 0.75rem 1rem;
         font-size: 1rem;
-    }
-
-    .page-layout {
-        flex-wrap: wrap;
     }
 
     .hero {
