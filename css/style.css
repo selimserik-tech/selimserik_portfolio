@@ -237,3 +237,34 @@ button:focus-visible,
 .footer-nav a:hover {
     color: white;
 }
+
+/* =========================================================
+   Sidebar Afbeelding
+========================================================= */
+
+.sidebar {
+    width: 300px; /* Standaard breedte van de sidebar, aanpasbaar */
+    max-width: 100%;
+    overflow: hidden; /* Verbergt alles buiten de container */
+}
+
+.sidebar img {
+    width: 100%; /* Zorgt ervoor dat de afbeelding zich aanpast aan de breedte van de sidebar */
+    height: auto; /* Houdt de verhouding van de afbeelding intact */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes schaalt zonder vervorming */
+}
+
+/* =========================================================
+   Media Queries voor Responsiviteit (Sidebar Afbeelding)
+========================================================= */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Zorgt ervoor dat de sidebar zich aanpast bij kleinere schermen */
+    }
+
+    .sidebar img {
+        width: 100%;
+        height: auto;
+    }
+}
