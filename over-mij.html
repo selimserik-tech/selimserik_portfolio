@@ -6,6 +6,63 @@
     <title>Over mij | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+
+    <style>
+        .stats-section-light {
+            background: #eef6fb;
+            color: #2c3e50;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+
+        .stats-section-light .stat-card h3 {
+            color: #3498db;
+        }
+
+        .stats-section-light .stat-card p {
+            color: #4f6475;
+        }
+
+        .style-values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .style-values-text h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-size: 1.4rem;
+        }
+
+        .style-values-text ul {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+        }
+
+        .style-values-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        .leary-image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .leary-image {
+            max-width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 900px) {
+            .style-values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -17,55 +74,92 @@
 
     <div class="page-layout">
         <aside class="sidebar">
+
             <div class="sidebar-profile">
                 <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
             </div>
+
+            <div class="sidebar-brand"></div>
 
             <nav class="site-nav" aria-label="Hoofdmenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="over-mij.html" aria-current="page">Over mij</a></li>
+                    <li><a href="cv.html">CV</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
                     <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
                     <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
-                    <li><a href="cv.html">CV</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </aside>
 
         <main id="main-content" class="main-content">
-            
-            <!-- Professioneel Portfolio Section -->
-            <section class="container overview-section">
-                <h2>Professioneel Portfolio</h2>
-                <p>Deze website geeft een overzicht van mijn professionele ontwikkeling, mijn rol binnen het ICT-onderwijs, mijn onderwijsproducten, onderzoek, bewijsstukken en curriculum vitae.</p>
+
+            <section class="container interactive-section">
+                <div class="interactive-copy">
+                    <h2>Professioneel profiel</h2>
+                    <p>
+                        Ik ben ruim 12,5 jaar werkzaam binnen het mbo-onderwijs. Binnen ROC van Twente richt
+                        ik mij op de opleiding Software Developer, waar ik studenten begeleid in hun ontwikkeling
+                        als beginnend beroepsprofessional.
+                    </p>
+                    <p>
+                        Mijn professionele identiteit kenmerkt zich door betrokkenheid bij studenten,
+                        verantwoordelijkheid nemen, kwaliteitsgericht werken en de verbinding zoeken met
+                        collega’s en het werkveld. Ik vind het belangrijk dat studenten zich gezien voelen,
+                        maar ook leren om zelf verantwoordelijkheid te nemen voor hun ontwikkeling.
+                    </p>
+                    <p>
+                        In mijn werk probeer ik structuur, duidelijkheid en nabijheid te combineren. Studenten
+                        moeten weten waar zij aan toe zijn, maar ook ervaren dat zij met vragen, twijfels of
+                        problemen terechtkunnen.
+                    </p>
+                </div>
             </section>
 
-            <!-- Leeswijzer Section -->
-            <section class="container overview-section">
-                <h3>Korte leeswijzer</h3>
-                <p>Deze Home-pagina is bedoeld als startpunt van mijn professionele portfolio. Gebruik het menu links om gericht naar een onderdeel te gaan. Mijn persoonlijke profiel staat op <a href="over-mij.html">Over mij</a>, mijn competentieontwikkeling op <a href="portfolio.html">Portfolio</a> en de onderbouwing daarvan op <a href="bewijsstukken.html">Bewijsstukken</a>.</p>
-                <p>Daarnaast zijn ook mijn <a href="cv.html">CV</a>, mijn bijdrage aan <a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a>, mijn werk rondom <a href="onderzoek-innovatie.html">Onderzoek & innovatie</a> en mijn <a href="contact.html">Contactgegevens</a> opgenomen. Zo geeft deze website een compleet overzicht van mijn rol, ontwikkeling, onderwijsproducten, onderzoek en professionele bereikbaarheid.</p>
+            <section class="container profile-grid">
+                <article class="profile-card">
+                    <h2>Mijn achtergrond</h2>
+                    <p>
+                        Mijn ervaring binnen het mbo heeft mij gevormd als docent, begeleider en onderwijsontwikkelaar.
+                        Ik heb gewerkt met studenten op verschillende niveaus en ben steeds sterker gaan werken vanuit
+                        structuur, verbinding en kwaliteitsbewust handelen.
+                    </p>
+                </article>
+
+                <article class="profile-card">
+                    <h2>Mijn onderwijsvisie</h2>
+                    <p>
+                        Goed onderwijs vraagt om vakinhoud, begeleiding en duidelijke verwachtingen. Studenten leren
+                        niet alleen door kennis op te doen, maar ook door te oefenen met samenwerken, communiceren,
+                        plannen, reflecteren en verantwoordelijkheid nemen.
+                    </p>
+                </article>
+
+                <article class="profile-card">
+                    <h2>Mijn ontwikkelrichting</h2>
+                    <p>
+                        Mijn ontwikkeling richt zich op coachend begeleiden, vroegsignalering, technische verdieping,
+                        BPV-rolverheldering, curriculumontwikkeling en het structureel benutten van student- en
+                        werkveldfeedback.
+                    </p>
+                </article>
+
+                <article class="profile-card">
+                    <h2>Mijn ambitie</h2>
+                    <p>
+                        Ik wil mijn ervaring sterker inzetten voor het team Software Developer. Dat betekent kennis
+                        delen, collega’s ondersteunen en bijdragen aan onderwijs dat beter aansluit op studenten,
+                        leerbedrijven en actuele ICT-ontwikkelingen.
+                    </p>
+                </article>
             </section>
 
-            <!-- Over Mij Section -->
-            <section class="container overview-section">
-                <h3>Over mij</h3>
-                <p>Op deze pagina staat mijn professionele profiel centraal: mijn achtergrond, rol als docent, SLB’er en BPV-begeleider en mijn ontwikkelrichting binnen het ICT-onderwijs.</p>
-            </section>
-
-            <!-- Portfolio Section -->
-            <section class="container overview-section">
-                <h3>Portfolio</h3>
-                <p>Hier werk ik mijn bekwaamheid uit aan de hand van SBL-competenties, reflectie, feedbackbronnen, ontwikkeldoelen en mijn bijdrage richting een senior-ICT-docent.</p>
-            </section>
-
-            <!-- Begeleidingsstijl Section -->
-            <section class="container about-section">
-                <div class="profile-subsection">
-                    <h3>Begeleidingsstijl</h3>
+            <section class="container interactive-section">
+                <div class="interactive-copy">
+                    <h2>Begeleidingsstijl</h2>
                     <p>
                         Mijn begeleidingsstijl sluit aan bij het kwadrant Samen-Boven uit de Roos van Leary.
                         Op basis van de BPV- en SLB-lesevaluaties kan mijn stijl worden omschreven als die
@@ -75,8 +169,8 @@
                     <p>
                         Studenten ervaren mij als benaderbaar en betrokken. Tegelijkertijd vind ik het belangrijk
                         om duidelijke kaders te bieden, afspraken te bewaken en studenten te helpen richting te
-                        geven aan hun ontwikkeling. Ik geef richting waar dat nodig is, maar wil studenten
-                        tegelijk steeds meer eigenaar maken van hun eigen leerproces.
+                        geven aan hun ontwikkeling. Ik geef richting waar dat nodig is, maar wil studenten tegelijk
+                        steeds meer eigenaar maken van hun eigen leerproces.
                     </p>
                     <p>
                         Mijn ontwikkelpunt is om vaker coachend terug te schakelen: minder snel oplossen en
@@ -87,13 +181,12 @@
                 </div>
             </section>
 
-            <!-- Stijl en Waarden Section -->
-            <section class="container about-section">
+            <section class="container interactive-section">
                 <div class="style-values-grid">
                     <div class="style-values-text">
-                        <div class="profile-subsection">
+                        <div>
                             <h3>Duiding van mijn stijl</h3>
-                            <ul>
+                            <ul class="doc-list">
                                 <li><strong>Leidend:</strong> overzicht, kaders, voortgang en afspraken.</li>
                                 <li><strong>Helpend:</strong> nabijheid, ondersteuning en vertrouwen.</li>
                                 <li><strong>Samen-as:</strong> toegankelijkheid en verbinding.</li>
@@ -102,9 +195,9 @@
                             </ul>
                         </div>
 
-                        <div class="profile-subsection">
+                        <div style="margin-top: 2rem;">
                             <h3>Kernwaarden</h3>
-                            <ul>
+                            <ul class="doc-list">
                                 <li>Betrokken en toegankelijk.</li>
                                 <li>Duidelijk en gestructureerd.</li>
                                 <li>Studentgericht en ontwikkelingsgericht.</li>
@@ -120,8 +213,7 @@
                 </div>
             </section>
 
-            <!-- Rollen als docent, SLB’er, BPV-begeleider en team Section -->
-            <section class="container four-column-grid">
+            <section class="container profile-grid">
                 <article class="profile-card">
                     <h2>Mijn rol als docent</h2>
                     <p>
@@ -174,6 +266,34 @@
                         Ik wil niet alleen onderwijsproducten ontwikkelen, maar ook collega’s meenemen in de
                         opbrengsten daarvan. Denk aan vroegsignalering, het BPV-lesprogramma en werkveldinput
                         vanuit stagebedrijven.
+                    </p>
+                </article>
+            </section>
+
+            <section class="container profile-grid">
+                <article class="profile-card">
+                    <h2>Professionele ontwikkeling</h2>
+                    <p>
+                        Mijn professionele ontwikkeling richt zich op coachend begeleiden, vroegsignalering,
+                        technische verdieping, BPV-rolverheldering, curriculumontwikkeling en het structureel
+                        benutten van student- en werkveldfeedback.
+                    </p>
+                    <p>
+                        Daarnaast wil ik AI, data en praktijkgericht onderzoek sterker verbinden aan het onderwijs
+                        binnen Software Development.
+                    </p>
+                </article>
+
+                <article class="profile-card">
+                    <h2>Master of Informatics - Applied Data Science</h2>
+                    <p>
+                        Mijn inschrijving voor de deeltijdmaster Master of Informatics - Applied Data Science
+                        sluit aan bij mijn ambitie om actuele technologie, data en onderzoek sterker te verbinden
+                        met onderwijsontwikkeling.
+                    </p>
+                    <p>
+                        De kennis die ik hiermee opdoe wil ik benutten voor curriculumontwikkeling, keuzedelen,
+                        praktijkgericht onderzoek en innovatie binnen het ICT-onderwijs.
                     </p>
                 </article>
             </section>
