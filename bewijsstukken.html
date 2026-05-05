@@ -6,71 +6,6 @@
     <title>Bewijsstukken | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
-    <style>
-        /* Container met achtergrondkleur */
-        .highlight-section {
-            background-color: #ffffff; /* Witte achtergrond voor de secties */
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
-        }
-
-        .profile-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .profile-card {
-            background-color: #f9f9f9;
-            border-radius: 12px;
-            padding: 1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .profile-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .attachment-btn {
-            margin-top: 0.5rem;
-        }
-
-        .attachment-frame-wrapper {
-            margin-top: 1rem;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .attachment-viewer {
-            width: 100%;
-            height: 600px;
-            border: none;
-        }
-
-        table.evidence-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        table.evidence-table th, table.evidence-table td {
-            border: 1px solid #ddd;
-            padding: 0.5rem;
-        }
-
-        table.evidence-table th {
-            background-color: #000000; /* zwart */
-            color: #ffffff; /* wit lettertype */
-        }
-
-        .interactive-panel ul.doc-list {
-            padding-left: 1.2rem;
-        }
-    </style>
 </head>
 <body>
 
@@ -101,9 +36,8 @@
 
     <main id="main-content" class="main-content">
 
-        <!-- Hero Section -->
+        <!-- Intro Sectie -->
         <section class="container highlight-section">
-          
             <h1>Bewijsstukken bij mijn professionele ontwikkeling</h1>
             <p>
                 Op deze pagina staan de bewijsstukken die mijn professionele handelen onderbouwen.
@@ -122,7 +56,7 @@
             </p>
             <p>
                 Daarmee ontstaat een breed en navolgbaar beeld van mijn bekwaamheid, ontwikkelpunten
-                en bijdrage aan de opleiding Software Development.
+                en bijdrage aan de opleiding Software Developer.
             </p>
         </section>
 
@@ -177,12 +111,11 @@
             </table>
         </section>
 
-        <!-- Alle Bijlagen Grid -->
+        <!-- Bijlagen Grid -->
         <section class="container highlight-section">
             <h2>Volledige bijlagenlijst</h2>
             <div class="profile-grid">
 
-                <!-- Bijlagen 1 t/m 13 -->
                 <article class="profile-card">
                     <h2>Bijlage 1</h2>
                     <p><strong>Beoordelingsgesprek manager</strong></p>
@@ -253,12 +186,9 @@
         </section>
 
         <!-- Viewer -->
-        <section class="container highlight-section">
+        <section class="container highlight-section" id="bijlage-viewer-section">
             <h2 id="selectedAttachmentTitle">Geselecteerde bijlage</h2>
             <p>Klik op een bijlage hierboven om het document hier te tonen.</p>
-            <div class="viewer-actions">
-                <a id="openAttachmentNewTab" class="btn btn-primary" href="#" target="_blank" rel="noopener">Open in nieuw tabblad</a>
-            </div>
             <div class="attachment-frame-wrapper">
                 <iframe id="attachmentViewer" class="attachment-viewer" src="" title="Geselecteerde bijlage"></iframe>
             </div>
@@ -272,23 +202,6 @@
         <p>© 2026 Selim Serik | ICT-docent</p>
     </div>
 </footer>
-
-<script>
-    const attachmentBtns = document.querySelectorAll('.attachment-btn');
-    const viewer = document.getElementById('attachmentViewer');
-    const titleEl = document.getElementById('selectedAttachmentTitle');
-    const openNewTab = document.getElementById('openAttachmentNewTab');
-
-    attachmentBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const file = btn.getAttribute('data-file');
-            const title = btn.getAttribute('data-title');
-            viewer.src = file;
-            titleEl.textContent = title;
-            openNewTab.href = file;
-        });
-    });
-</script>
 
 </body>
 </html>
