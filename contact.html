@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
     <style>
-        /* Container voor 'Contact over' met witte achtergrond */
-        .interactive-panel {
+        /* Witte achtergrond voor 'Contact over' en Contactgegevens */
+        .interactive-panel,
+        .about-details {
             background-color: #ffffff;
             border-radius: 12px;
             padding: 1.5rem;
@@ -16,7 +17,8 @@
             margin-top: 1rem;
         }
 
-        .interactive-panel h3 {
+        .interactive-panel h3,
+        .about-details h3 {
             margin-top: 0;
             margin-bottom: 1rem;
             font-size: 1.2rem;
@@ -39,85 +41,107 @@
         .interactive-panel ul.doc-list li:last-child {
             border-bottom: none;
         }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .about-details div {
+            padding: 0.75rem;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .about-details a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .about-details a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
+    </div>
+</header>
+
+<div class="page-layout">
+    <aside class="sidebar">
+
+        <div class="sidebar-profile">
+            <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
         </div>
-    </header>
 
-    <div class="page-layout">
-        <aside class="sidebar">
+        <div class="sidebar-brand"></div>
 
-            <div class="sidebar-profile">
-                <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
+        <nav class="site-nav" aria-label="Hoofdmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="over-mij.html">Over mij</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
+                <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
+                <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="main-content" class="main-content">
+
+        <section class="container interactive-section">
+            <div class="interactive-copy">
+                <p class="eyebrow">Contact | Selim Serik</p>
+                <h2>Neem contact op</h2>
+                <p>
+                    Heb je vragen over mijn portfolio, professionele ontwikkeling, onderwijsontwikkeling,
+                    BPV, SLB, werkveldonderzoek of bewijsstukken? Neem gerust contact met mij op.
+                    Ik licht mijn keuzes graag toe.
+                </p>
             </div>
 
-            <div class="sidebar-brand"></div>
-
-            <nav class="site-nav" aria-label="Hoofdmenu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="over-mij.html">Over mij</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
-                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
-                    <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+            <div class="interactive-panel">
+                <h3>Contact over</h3>
+                <ul class="doc-list">
+                    <li>Mijn professionele portfolio en SBL-competenties.</li>
+                    <li>SLB, BPV-begeleiding en studentbegeleiding.</li>
+                    <li>Onderwijsontwikkeling en vroegsignalering.</li>
+                    <li>Werkveldonderzoek en aansluiting op de beroepspraktijk.</li>
+                    <li>Bewijsstukken, bijlagen en bewijsmatrix.</li>
                 </ul>
-            </nav>
-        </aside>
+            </div>
+        </section>
 
-        <main id="main-content" class="main-content">
+        <section class="container about-section">
+            <div class="content-block">
+                <h2>Contactgegevens</h2>
 
-            <section class="container interactive-section">
-                <div class="interactive-copy">
-                    <p class="eyebrow">Contact | Selim Serik</p>
-                    <h2>Neem contact op</h2>
-                    <p>
-                        Heb je vragen over mijn portfolio, professionele ontwikkeling, onderwijsontwikkeling,
-                        BPV, SLB, werkveldonderzoek of bewijsstukken? Neem gerust contact met mij op.
-                        Ik licht mijn keuzes graag toe.
-                    </p>
+                <div class="about-details">
+                    <div><strong>Naam:</strong> Selim Serik</div>
+                    <div><strong>E-mail:</strong> <a href="mailto:sserik@rocvantwente.nl">sserik@rocvantwente.nl</a></div>
+                    <div><strong>Telefoon:</strong> <a href="tel:+31622225454">06-22225454</a></div>
+                    <div><strong>Website:</strong> <a href="https://www.slimart.nl" target="_blank" rel="noopener">www.slimart.nl</a></div>
                 </div>
+            </div>
+        </section>
 
-                <div class="interactive-panel">
-                    <h3>Contact over</h3>
-                    <ul class="doc-list">
-                        <li>Mijn professionele portfolio en SBL-competenties.</li>
-                        <li>SLB, BPV-begeleiding en studentbegeleiding.</li>
-                        <li>Onderwijsontwikkeling en vroegsignalering.</li>
-                        <li>Werkveldonderzoek en aansluiting op de beroepspraktijk.</li>
-                        <li>Bewijsstukken, bijlagen en bewijsmatrix.</li>
-                    </ul>
-                </div>
-            </section>
+    </main>
+</div>
 
-            <section class="container about-section">
-                <div class="content-block">
-                    <h2>Contactgegevens</h2>
-
-                    <div class="about-details">
-                        <div><strong>Naam:</strong> Selim Serik</div>
-                        <div><strong>E-mail:</strong> <a href="mailto:sserik@rocvantwente.nl">sserik@rocvantwente.nl</a></div>
-                        <div><strong>Telefoon:</strong> <a href="tel:+31622225454">06-22225454</a></div>
-                        <div><strong>Website:</strong> <a href="https://www.slimart.nl" target="_blank" rel="noopener">www.slimart.nl</a></div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2026 Selim Serik | ICT-docent</p>
     </div>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© 2026 Selim Serik | ICT-docent</p>
-        </div>
-    </footer>
+</footer>
 
 </body>
 </html>
