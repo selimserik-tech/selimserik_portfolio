@@ -331,6 +331,59 @@ button:focus-visible,
 }
 
 /* =========================================================
+   Home sectie: Korte leeswijzer, Introductie en Onderwerpen
+========================================================= */
+
+.home-intro-section, 
+.home-readme-section,
+.home-sections {
+    margin-bottom: 2rem;
+}
+
+.home-intro-card, 
+.home-readme-card,
+.home-topic-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.home-topic-section .profile-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.home-topic-section .section-number {
+    font-size: 1.5rem;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.home-topic-section h2 {
+    font-size: 1.75rem;
+    color: #333;
+}
+
+.home-topic-section p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.section-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.section-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
    Footer
 ========================================================= */
 
