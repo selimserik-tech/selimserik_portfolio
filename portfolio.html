@@ -13,7 +13,7 @@
         }
 
         /* Witte achtergrond containers */
-        .interactive-copy, .content-block, .interactive-panel {
+        .interactive-copy, .content-block, .interactive-panel, .profile-card {
             background-color: #ffffff;
             border-radius: 12px;
             padding: 1.5rem;
@@ -32,10 +32,6 @@
 
         /* Profile cards */
         .profile-card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
@@ -111,7 +107,7 @@
 
     <main id="main-content" class="main-content">
 
-        <!-- Geïntegreerde introductie + bewijsgerichte opbouw + bewijsmatrix -->
+        <!-- Introductie + bewijsgerichte opbouw -->
         <section class="container interactive-section">
             <div class="interactive-copy">
                 <h2>Mijn bekwaamheid als docent</h2>
@@ -126,10 +122,6 @@
                     Deze pagina richt zich op de onderbouwing van mijn bekwaamheid. Mijn persoonlijke achtergrond
                     staat op de pagina Over mij. Hier verbind ik mijn handelen aan competenties, feedback,
                     bewijsstukken en ontwikkeldoelen.
-                </p>
-                <p>
-                    De bewijsvoering bestaat uit feedback van leidinggevende, collega’s en betrokken commissies,
-                    studentervaringen, werkveldonderzoek, onderwijsproducten en reflectie op mijn ontwikkeling.
                 </p>
 
                 <h3>Bewijsmatrix</h3>
@@ -150,7 +142,7 @@
             </div>
         </section>
 
-        <!-- Profile grid met competenties -->
+        <!-- 7 Competentie cards -->
         <section class="container profile-grid">
             <article class="profile-card">
                 <h2>1. Interpersoonlijk competent</h2>
@@ -186,6 +178,43 @@
                 <h2>7. Reflectie en ontwikkeling</h2>
                 <p>Ik reflecteer continu op mijn eigen handelen, zowel in de klas als in project- en BPV-begeleiding. Feedback van studenten, collega’s en werkveldonderzoek vormt input voor mijn Persoonlijk Ontwikkelingsplan (POP). Mijn ontwikkeldoelen richten zich op coachend begeleiden, versterken van pedagogisch handelen, technische verdieping in AI, data en DevOps, en het verbeteren van curriculum en soft skills. Reflectie stelt me in staat om onderwijspraktijken aan te passen, processen te optimaliseren en mijn rol als docent, begeleider en ontwikkelaar te professionaliseren. Ik benut evaluaties, zelfreflectie en POP-doelen om zowel mijn vakinhoudelijke als pedagogische competenties verder te ontwikkelen.</p>
             </article>
+        </section>
+
+        <!-- Bewijsstukken Cards -->
+        <section class="container profile-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <article class="profile-card">
+                <h2>Onderwijsontwikkeling als bewijs</h2>
+                <p>Het Plan van Aanpak Vroegsignalering, de gespreksleidraad en het BPV-lesprogramma laten zien dat ik praktijkervaring omzet in overdraagbare onderwijsproducten.</p>
+            </article>
+
+            <article class="profile-card">
+                <h2>Onderzoek & innovatie als bewijs</h2>
+                <p>Het onderzoek onder 38 stagebedrijven onderbouwt mijn bijdrage aan curriculumontwikkeling, BPV-voorbereiding en actuele technologische thema’s.</p>
+            </article>
+
+            <article class="profile-card">
+                <h2>Professionalisering</h2>
+                <p>Mijn inschrijving voor de deeltijdmaster Master of Informatics - Applied Data Science sluit aan bij mijn ambitie om AI, data en praktijkgericht onderzoek sterker te verbinden aan het onderwijs.</p>
+            </article>
+        </section>
+
+        <!-- Persoonlijk Ontwikkelingsplan -->
+        <section class="container interactive-section" style="margin-top: 2rem;">
+            <div class="interactive-copy" style="padding: 2rem; background: #fff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
+                <h2>Persoonlijk ontwikkelingsplan</h2>
+                <p>Mijn POP is gebaseerd op feedback, studentervaringen, werkveldinput en mijn eigen reflectie. De ontwikkeldoelen richten zich op het versterken van mijn handelen als docent, begeleider en onderwijsontwikkelaar.</p>
+                <h3>Belangrijkste ontwikkeldoelen</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">Coachend begeleiden versterken.</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">Vroegsignalering borgen binnen het team.</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">Technische verdieping rond AI, data, security, cloud en DevOps.</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">BPV-rol helder positioneren.</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">Curriculum en soft skills versterken.</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">Studentfeedback structureel benutten.</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">Applied Data Science verbinden aan onderwijsinnovatie.</li>
+                    <li style="padding: 0.5rem 0;">Roos van Leary bewuster inzetten in begeleiding.</li>
+                </ul>
+            </div>
         </section>
 
     </main>
