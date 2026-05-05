@@ -7,18 +7,37 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
     <style>
-        /* Verwijder achtergrondkleur en schaduw van contactdetails */
-        .about-details {
-            background-color: transparent !important;
-            box-shadow: none !important;
-            padding: 0;
+        /* Container voor 'Contact over' met witte achtergrond */
+        .interactive-panel {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            margin-top: 1rem;
         }
 
-        /* Optioneel: verwijder padding van individuele items */
-        .about-details div {
-            background-color: transparent !important;
-            margin: 0 0 0.5rem 0;
-            padding: 0;
+        .interactive-panel h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .interactive-panel ul.doc-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .interactive-panel ul.doc-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            color: #2c3e50;
+        }
+
+        .interactive-panel ul.doc-list li:last-child {
+            border-bottom: none;
         }
     </style>
 </head>
