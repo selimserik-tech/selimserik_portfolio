@@ -6,6 +6,23 @@
     <title>Home | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+
+    <style>
+        .stats-section-light {
+            background: #eef6fb;
+            color: #2c3e50;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+
+        .stats-section-light .stat-card h3 {
+            color: #3498db;
+        }
+
+        .stats-section-light .stat-card p {
+            color: #4f6475;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,37 +39,50 @@
                 <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
             </div>
 
+            <div class="sidebar-brand"></div>
+
             <nav class="site-nav" aria-label="Hoofdmenu">
                 <ul>
                     <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="over-mij.html">Over mij</a></li>
+                    <li><a href="cv.html">CV</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
                     <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
                     <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
-                    <li><a href="cv.html">CV</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
         </aside>
 
         <main id="main-content" class="main-content">
 
-            <section class="container home-intro-section">
-                <div class="home-intro-card">
-                    <p class="eyebrow">Professioneel portfolio</p>
-                    <h1>Welkom op mijn portfolio</h1>
-                    <p>
-                        Deze website geeft een overzicht van mijn professionele ontwikkeling, mijn rol binnen
-                        het ICT-onderwijs, mijn onderwijsproducten, onderzoek, bewijsstukken en curriculum vitae.
-                    </p>
+            <section class="container stats-section stats-section-light">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>12,5+ jaar</h3>
+                        <p>Ervaring binnen het mbo-onderwijs</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>7</h3>
+                        <p>SBL-competenties als basis voor het portfolio</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>38</h3>
+                        <p>Stagebedrijven betrokken bij werkveldonderzoek</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>20 weken</h3>
+                        <p>BPV-lesprogramma voor stagevoorbereiding</p>
+                    </div>
                 </div>
             </section>
 
-            <section class="container home-readme-section">
-                <div class="home-readme-card">
-                    <p class="eyebrow">Leeswijzer</p>
+            <section class="container interactive-section">
+                <div class="interactive-copy">
                     <h2>Korte leeswijzer</h2>
                     <p>
                         Deze Home-pagina is bedoeld als startpunt van mijn professionele portfolio. Gebruik het
@@ -70,79 +100,54 @@
                 </div>
             </section>
 
-            <section class="container home-sections" aria-label="Onderdelen van het portfolio">
+            <section class="container profile-grid">
+                <article class="profile-card">
+                    <h2>Over mij</h2>
+                    <p>
+                        Op deze pagina staat mijn professionele profiel centraal: mijn achtergrond, rol als docent,
+                        SLB’er en BPV-begeleider en mijn ontwikkelrichting binnen het ICT-onderwijs.
+                    </p>
+                </article>
 
-                <section class="home-topic-section">
-                    <article class="profile-card">
-                        <h2>Over mij</h2>
-                        <p>
-                            Op deze pagina staat mijn professionele profiel centraal: mijn achtergrond, rol als docent,
-                            SLB’er en BPV-begeleider en mijn ontwikkelrichting binnen het ICT-onderwijs.
-                        </p>
-                    </article>
-                </section>
+                <article class="profile-card">
+                    <h2>Portfolio</h2>
+                    <p>
+                        Hier werk ik mijn bekwaamheid uit aan de hand van SBL-competenties, reflectie,
+                        feedbackbronnen, ontwikkeldoelen en mijn bijdrage richting een senior-docentrol.
+                    </p>
+                </article>
 
-                <section class="home-topic-section">
-                    <article class="profile-card">
-                        <h2>Portfolio</h2>
-                        <p>
-                            Hier werk ik mijn bekwaamheid uit aan de hand van SBL-competenties, reflectie,
-                            feedbackbronnen, ontwikkeldoelen en mijn bijdrage richting een senior-docentrol.
-                        </p>
-                    </article>
-                </section>
+                <article class="profile-card">
+                    <h2>Onderwijsontwikkeling</h2>
+                    <p>
+                        Deze pagina beschrijft mijn onderwijsproducten, zoals vroegsignalering,
+                        de gespreksleidraad en het BPV-lesprogramma van twintig weken.
+                    </p>
+                </article>
 
-                <section class="home-topic-section">
-                    <article class="profile-card">
-                        <h2>Onderwijsontwikkeling</h2>
-                        <p>
-                            Deze pagina beschrijft mijn onderwijsproducten, zoals vroegsignalering,
-                            de gespreksleidraad en het BPV-lesprogramma van twintig weken.
-                        </p>
-                    </article>
-                </section>
+                <article class="profile-card">
+                    <h2>Onderzoek & innovatie</h2>
+                    <p>
+                        Hier staat mijn werkveldonderzoek centraal, inclusief de verbinding met AI, data,
+                        security, cloud, DevOps en toekomstbestendig ICT-onderwijs.
+                    </p>
+                </article>
 
-                <section class="home-topic-section">
-                    <article class="profile-card">
-                        <h2>Onderzoek & innovatie</h2>
-                        <p>
-                            Hier staat mijn werkveldonderzoek centraal, inclusief de verbinding met AI, data,
-                            security, cloud, DevOps en toekomstbestendig ICT-onderwijs.
-                        </p>
-                    </article>
-                </section>
+                <article class="profile-card">
+                    <h2>Bewijsstukken</h2>
+                    <p>
+                        Op deze pagina staan de volledige bewijsmatrix, bijlagenlijst en klikbare documenten
+                        die mijn professionele ontwikkeling onderbouwen.
+                    </p>
+                </article>
 
-                <section class="home-topic-section">
-                    <article class="profile-card">
-                        <h2>Bewijsstukken</h2>
-                        <p>
-                            Op deze pagina staan de volledige bewijsmatrix, bijlagenlijst en klikbare documenten
-                            die mijn professionele ontwikkeling onderbouwen.
-                        </p>
-                    </article>
-                </section>
-
-                <section class="home-topic-section">
-                    <article class="profile-card">
-                        <h2>CV</h2>
-                        <p>
-                            Op deze pagina staat mijn curriculum vitae met mijn opleiding, werkervaring,
-                            professionele achtergrond, rollen, vaardigheden en relevante ontwikkeling binnen
-                            het ICT-onderwijs.
-                        </p>
-                    </article>
-                </section>
-
-                <section class="home-topic-section">
-                    <article class="profile-card">
-                        <h2>Contact</h2>
-                        <p>
-                            Voor vragen, toelichting of hulp rondom mijn portfolio, onderwijsontwikkeling,
-                            onderzoek of bewijsstukken kun je contact met mij opnemen.
-                        </p>
-                    </article>
-                </section>
-
+                <article class="profile-card">
+                    <h2>Contact</h2>
+                    <p>
+                        Voor vragen, toelichting of hulp rondom mijn portfolio, onderwijsontwikkeling,
+                        onderzoek of bewijsstukken kun je contact met mij opnemen.
+                    </p>
+                </article>
             </section>
 
         </main>
