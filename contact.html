@@ -7,71 +7,53 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
     <style>
-        /* Sectie styling */
-        section.container {
+        .interactive-section {
+            background: #ffffff;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .interactive-section h2 {
+            color: #2c3e50;
             margin-bottom: 1rem;
-            padding: 0;
-        }
-
-        /* Witte panels */
-        .interactive-copy,
-        .interactive-panel,
-        .about-details {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-            overflow: hidden;
-        }
-
-        /* Kopjes */
-        .interactive-copy h2 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.6rem;
-        }
-
-        .interactive-copy p {
-            margin-bottom: 0.75rem;
         }
 
         .interactive-panel h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.2rem;
+            color: #3498db;
             border-bottom: 1px solid #e0e0e0;
             padding-bottom: 0.25rem;
-            color: #2c3e50;
+            margin-bottom: 0.5rem;
         }
 
-        /* Lijst contact onderwerpen */
         .interactive-panel ul.doc-list {
             list-style: none;
-            padding: 0;
+            padding-left: 0;
             margin: 0;
         }
 
         .interactive-panel ul.doc-list li {
             padding: 0.4rem 0;
             border-bottom: 1px solid #e0e0e0;
-            color: #2c3e50;
         }
 
         .interactive-panel ul.doc-list li:last-child {
             border-bottom: none;
         }
 
-        /* Contactgegevens grid */
         .about-details {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 0.5rem;
-            margin-top: 0.5rem;
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
         .about-details div {
-            padding: 0.5rem;
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .about-details a {
@@ -83,17 +65,9 @@
             text-decoration: underline;
         }
 
-        .page-layout {
-            padding: 0.5rem;
-        }
-
-        .main-content {
-            margin-left: 220px;
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                margin-left: 0;
+        @media (max-width: 900px) {
+            .about-details {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -126,7 +100,8 @@
     </aside>
 
     <main id="main-content" class="main-content">
-        <section class="container interactive-copy">
+
+        <section class="container interactive-section">
             <h2>Neem contact op</h2>
             <p>
                 Heb je vragen over mijn portfolio, professionele ontwikkeling, onderwijsontwikkeling,
@@ -152,6 +127,7 @@
                 <div><strong>Website:</strong> <a href="https://www.slimart.nl" target="_blank" rel="noopener">www.slimart.nl</a></div>
             </div>
         </section>
+
     </main>
 </div>
 
