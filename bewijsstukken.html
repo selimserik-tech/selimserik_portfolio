@@ -7,41 +7,66 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
     <style>
+        /* Section styling zonder achtergrondkleur */
         .highlight-section {
-            background-color: #ffffff;
+            background-color: transparent;
             border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            padding: 2rem 0;
             margin-bottom: 2rem;
         }
+
         .profile-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-top: 1rem;
         }
+
         .profile-card {
             background-color: #f9f9f9;
             border-radius: 12px;
             padding: 1rem;
             transition: transform 0.2s, box-shadow 0.2s;
         }
+
         .profile-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+
         .attachment-btn {
             margin-top: 0.5rem;
         }
+
         .attachment-frame-wrapper {
             margin-top: 1rem;
             border-radius: 12px;
             overflow: hidden;
         }
+
         .attachment-viewer {
             width: 100%;
             height: 600px;
             border: none;
+        }
+
+        table.evidence-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table.evidence-table th, table.evidence-table td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+        }
+
+        table.evidence-table th {
+            background-color: #f4f4f4;
+        }
+
+        .interactive-panel ul.doc-list {
+            padding-left: 1.2rem;
         }
     </style>
 </head>
@@ -97,6 +122,57 @@
                 Daarmee ontstaat een breed en navolgbaar beeld van mijn bekwaamheid, ontwikkelpunten
                 en bijdrage aan de opleiding Software Development.
             </p>
+        </section>
+
+        <!-- Bewijsmatrix -->
+        <section class="container highlight-section">
+            <h2>Volledige bewijsmatrix</h2>
+            <table class="evidence-table">
+                <thead>
+                    <tr>
+                        <th>Competentie / onderdeel</th>
+                        <th>Belangrijkste bewijsstukken</th>
+                        <th>Waarom relevant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3.1 Interpersoonlijk competent</td>
+                        <td>Bijlage 5, 6, 8, 12, 13</td>
+                        <td>Onderbouwt benaderbaarheid, vertrouwen, communicatie en professionele relatiekwaliteit.</td>
+                    </tr>
+                    <tr>
+                        <td>3.2 Pedagogisch competent</td>
+                        <td>Bijlage 1, 6, 7, 8, 10, 11, 12, 13</td>
+                        <td>Ondersteunt begeleiding, vroegsignalering en studentervaringen binnen SLB en BPV.</td>
+                    </tr>
+                    <tr>
+                        <td>3.3 Vakinhoudelijk en didactisch competent</td>
+                        <td>Bijlage 3, 4, 5, 9, 10</td>
+                        <td>Onderbouwt didactiek, examinering, kwaliteitszorg en BPV-lesprogramma.</td>
+                    </tr>
+                    <tr>
+                        <td>3.4 Organisatorisch competent</td>
+                        <td>Bijlage 1, 5, 7, 9, 10</td>
+                        <td>Ondersteunt planmatig werken, prioriteren en lessenreeks implementatie.</td>
+                    </tr>
+                    <tr>
+                        <td>3.5 Samenwerken met collega’s</td>
+                        <td>Bijlage 1, 3, 4, 5, 6, 7, 10</td>
+                        <td>Ondersteunt samenwerking, collegiale afstemming en overdraagbare onderwijsontwikkeling.</td>
+                    </tr>
+                    <tr>
+                        <td>3.6 Samenwerken met de omgeving</td>
+                        <td>Bijlage 2, 7, 8, 9, 10, 11</td>
+                        <td>Verbindt school, studenten, ouders/verzorgers en werkveldonderzoek.</td>
+                    </tr>
+                    <tr>
+                        <td>3.7 Reflectie en ontwikkeling</td>
+                        <td>Bijlage 1 t/m 13</td>
+                        <td>Ondersteunt leerhouding, feedbackverwerking en duurzame verbetering in begeleiding.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <!-- Bijlagen Grid -->
