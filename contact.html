@@ -7,16 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
     <style>
-        /* Witte achtergrond voor 'Contact over' en Contactgegevens */
+        /* Algemene sectie styling */
+        section.container {
+            margin-bottom: 2.5rem;
+        }
+
+        /* Witte achtergrond voor interactieve panels en contactgegevens */
+        .interactive-copy,
         .interactive-panel,
         .about-details {
             background-color: #ffffff;
             border-radius: 12px;
             padding: 1.5rem;
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            margin-top: 1rem;
+            white-space: normal;
+            overflow: hidden;
         }
 
+        /* Kopjes in panel */
         .interactive-panel h3,
         .about-details h3 {
             margin-top: 0;
@@ -25,6 +33,7 @@
             color: #2c3e50;
         }
 
+        /* Lijst in 'Contact over' */
         .interactive-panel ul.doc-list {
             list-style: none;
             padding-left: 0;
@@ -42,10 +51,12 @@
             border-bottom: none;
         }
 
+        /* Grid voor contactgegevens */
         .about-details {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
+            margin-top: 1rem;
         }
 
         .about-details div {
@@ -75,13 +86,9 @@
 
 <div class="page-layout">
     <aside class="sidebar">
-
         <div class="sidebar-profile">
             <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
         </div>
-
-        <div class="sidebar-brand"></div>
-
         <nav class="site-nav" aria-label="Hoofdmenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -98,16 +105,14 @@
 
     <main id="main-content" class="main-content">
 
-        <section class="container interactive-section">
-            <div class="interactive-copy">
-            
-                <h2>Neem contact op</h2>
-                <p>
-                    Heb je vragen over mijn portfolio, professionele ontwikkeling, onderwijsontwikkeling,
-                    BPV, SLB, werkveldonderzoek of bewijsstukken? Neem gerust contact met mij op.
-                    Ik licht mijn keuzes graag toe.
-                </p>
-            </div>
+        <!-- Geïntegreerde 'Contact over' en contactgegevens -->
+        <section class="container interactive-copy">
+            <h2>Neem contact op</h2>
+            <p>
+                Heb je vragen over mijn portfolio, professionele ontwikkeling, onderwijsontwikkeling,
+                BPV, SLB, werkveldonderzoek of bewijsstukken? Neem gerust contact met mij op.
+                Ik licht mijn keuzes graag toe.
+            </p>
 
             <div class="interactive-panel">
                 <h3>Contact over</h3>
@@ -119,18 +124,13 @@
                     <li>Bewijsstukken, bijlagen en bewijsmatrix.</li>
                 </ul>
             </div>
-        </section>
 
-        <section class="container about-section">
-            <div class="content-block">
-                <h2>Contactgegevens</h2>
-
-                <div class="about-details">
-                    <div><strong>Naam:</strong> Selim Serik</div>
-                    <div><strong>E-mail:</strong> <a href="mailto:sserik@rocvantwente.nl">sserik@rocvantwente.nl</a></div>
-                    <div><strong>Telefoon:</strong> <a href="tel:+31622225454">06-22225454</a></div>
-                    <div><strong>Website:</strong> <a href="https://www.slimart.nl" target="_blank" rel="noopener">www.slimart.nl</a></div>
-                </div>
+            <h3>Contactgegevens</h3>
+            <div class="about-details">
+                <div><strong>Naam:</strong> Selim Serik</div>
+                <div><strong>E-mail:</strong> <a href="mailto:sserik@rocvantwente.nl">sserik@rocvantwente.nl</a></div>
+                <div><strong>Telefoon:</strong> <a href="tel:+31622225454">06-22225454</a></div>
+                <div><strong>Website:</strong> <a href="https://www.slimart.nl" target="_blank" rel="noopener">www.slimart.nl</a></div>
             </div>
         </section>
 
