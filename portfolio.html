@@ -6,378 +6,241 @@
     <title>Portfolio | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    <style>
+        /* Ruimte tussen de secties */
+        section.container {
+            margin-bottom: 2rem;
+        }
+
+        /* Ruimte tussen cards in profile-grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        /* Styling voor individuele cards */
+        .profile-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Styling voor interactieve panels */
+        .interactive-panel {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            margin-top: 1rem;
+        }
+
+        .interactive-panel h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .interactive-panel ul.doc-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .interactive-panel ul.doc-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            color: #2c3e50;
+        }
+
+        .interactive-panel ul.doc-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Extra ruimte binnen content-blocks */
+        .content-block {
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive grid voor grote schermen */
+        @media (min-width: 768px) {
+            .profile-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
+    </div>
+</header>
+
+<div class="page-layout">
+    <aside class="sidebar">
+        <div class="sidebar-profile">
+            <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
         </div>
-    </header>
+        <nav class="site-nav" aria-label="Hoofdmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="over-mij.html">Over mij</a></li>
+                <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
+                <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
+                <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <div class="page-layout">
-        <aside class="sidebar">
+    <main id="main-content" class="main-content">
 
-            <div class="sidebar-profile">
-                <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
+        <!-- Introductie sectie -->
+        <section class="container interactive-section">
+            <div class="interactive-copy">
+                <h2>Mijn bekwaamheid als docent</h2>
+                <p>
+                    Dit portfolio onderbouwt mijn professionele handelen aan de hand van SBL-competenties,
+                    feedbackbronnen, studentervaringen, ontwikkelde onderwijsproducten, werkveldinput en
+                    mijn persoonlijk ontwikkelingsplan.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bewijsgerichte opbouw -->
+        <section class="container about-section">
+            <div class="content-block">
+                <h2>Bewijsgerichte opbouw</h2>
+                <p>
+                    Deze pagina richt zich op de onderbouwing van mijn bekwaamheid. Mijn persoonlijke
+                    achtergrond staat op de pagina Over mij. Hier verbind ik mijn handelen aan competenties,
+                    feedback, bewijsstukken en ontwikkeldoelen.
+                </p>
+                <p>
+                    De bewijsvoering bestaat uit feedback van leidinggevende, collega’s en betrokken
+                    commissies, studentervaringen, werkveldonderzoek, onderwijsproducten en reflectie op
+                    mijn ontwikkeling.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bewijsmatrix sectie -->
+        <section class="container interactive-section">
+            <div class="interactive-copy">
+                <h2>Bewijsmatrix</h2>
+                <p>
+                    In mijn portfolio koppel ik mijn professionele handelen aan concrete bewijsstukken.
+                    De bewijsstukken laten zien hoe feedback, studentervaringen, werkveldinput en ontwikkelde
+                    onderwijsproducten samen mijn bekwaamheid onderbouwen.
+                </p>
             </div>
 
-            <div class="sidebar-brand"></div>
-
-            <nav class="site-nav" aria-label="Hoofdmenu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="over-mij.html">Over mij</a></li>
-                    <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
-                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
-                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
-                    <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <div class="interactive-panel">
+                <h3>Volledige bewijsvoering</h3>
+                <ul class="doc-list">
+                    <li>Per competentie zijn bewijsstukken gekoppeld aan relevantie.</li>
+                    <li>De bijlagen tonen feedback, evaluaties en ontwikkelde producten.</li>
+                    <li>De bewijsstukken maken mijn ontwikkeling navolgbaar.</li>
                 </ul>
-            </nav>
-        </aside>
+            </div>
+        </section>
 
-        <main id="main-content" class="main-content">
+        <!-- Profile grid met competenties -->
+        <section class="container profile-grid">
+            <article class="profile-card">
+                <h2>1. Interpersoonlijk competent</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>2. Pedagogisch competent</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>3. Vakinhoudelijk en didactisch competent</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>4. Organisatorisch competent</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>5. Samenwerken met collega’s</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>6. Samenwerken met de omgeving</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>7. Reflectie en ontwikkeling</h2>
+                <p>...</p>
+            </article>
+        </section>
 
-            <section class="container interactive-section">
-                <div class="interactive-copy">
-                    <h2>Mijn bekwaamheid als docent</h2>
-                    <p>
-                        Dit portfolio onderbouwt mijn professionele handelen aan de hand van SBL-competenties,
-                        feedbackbronnen, studentervaringen, ontwikkelde onderwijsproducten, werkveldinput en
-                        mijn persoonlijk ontwikkelingsplan.
-                    </p>
-                </div>
-            </section>
+        <!-- Overige bewijzen -->
+        <section class="container profile-grid">
+            <article class="profile-card">
+                <h2>Onderwijsontwikkeling als bewijs</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>Onderzoek & innovatie als bewijs</h2>
+                <p>...</p>
+            </article>
+            <article class="profile-card">
+                <h2>Professionalisering</h2>
+                <p>...</p>
+            </article>
+        </section>
 
-            <section class="container about-section">
-                <div class="content-block">
-                    <h2>Bewijsgerichte opbouw</h2>
-                    <p>
-                        Deze pagina richt zich op de onderbouwing van mijn bekwaamheid. Mijn persoonlijke
-                        achtergrond staat op de pagina Over mij. Hier verbind ik mijn handelen aan competenties,
-                        feedback, bewijsstukken en ontwikkeldoelen.
-                    </p>
-                    <p>
-                        De bewijsvoering bestaat uit feedback van leidinggevende, collega’s en betrokken
-                        commissies, studentervaringen, werkveldonderzoek, onderwijsproducten en reflectie op
-                        mijn ontwikkeling.
-                    </p>
-                </div>
-            </section>
+        <!-- Persoonlijk ontwikkelingsplan -->
+        <section class="container interactive-section">
+            <div class="interactive-copy">
+                <h2>Persoonlijk ontwikkelingsplan</h2>
+                <p>
+                    Mijn POP is gebaseerd op feedback, studentervaringen, werkveldinput en mijn eigen
+                    reflectie. De ontwikkeldoelen richten zich op het versterken van mijn handelen als docent,
+                    begeleider en onderwijsontwikkelaar.
+                </p>
+            </div>
 
-            <section class="container interactive-section">
-                <div class="interactive-copy">
-                    <h2>Bewijsmatrix</h2>
-                    <p>
-                        In mijn portfolio koppel ik mijn professionele handelen aan concrete bewijsstukken.
-                        De bewijsstukken laten zien hoe feedback, studentervaringen, werkveldinput en ontwikkelde
-                        onderwijsproducten samen mijn bekwaamheid onderbouwen.
-                    </p>
-                </div>
+            <div class="interactive-panel">
+                <h3>Belangrijkste ontwikkeldoelen</h3>
+                <ul class="doc-list">
+                    <li>Coachend begeleiden versterken.</li>
+                    <li>Vroegsignalering borgen binnen het team.</li>
+                    <li>Technische verdieping rond AI, data, security, cloud en DevOps.</li>
+                    <li>BPV-rol helder positioneren.</li>
+                    <li>Curriculum en soft skills versterken.</li>
+                    <li>Studentfeedback structureel benutten.</li>
+                    <li>Applied Data Science verbinden aan onderwijsinnovatie.</li>
+                    <li>Roos van Leary bewuster inzetten in begeleiding.</li>
+                </ul>
+            </div>
+        </section>
 
-                <div class="interactive-panel">
-                    <h3>Volledige bewijsvoering</h3>
-                    <ul class="doc-list">
-                        <li>Per competentie zijn bewijsstukken gekoppeld aan relevantie.</li>
-                        <li>De bijlagen tonen feedback, evaluaties en ontwikkelde producten.</li>
-                        <li>De bewijsstukken maken mijn ontwikkeling navolgbaar.</li>
-                    </ul>
-                </div>
-            </section>
+    </main>
+</div>
 
-            <section class="container profile-grid">
-                <article class="profile-card">
-                    <h2>1. Interpersoonlijk competent</h2>
-                    <p>
-                        Ik werk bewust aan een open, veilige en respectvolle relatie met studenten en collega’s.
-                        Studenten moeten mij kunnen benaderen wanneer zij vragen hebben, vastlopen of extra
-                        begeleiding nodig hebben. In mijn communicatie ben ik duidelijk, rustig en betrouwbaar.
-                        Daardoor kan ik signalen vroeg oppakken en studenten tijdig ondersteunen.
-                    </p>
-                    <p>
-                        Uit feedback blijkt dat ik respectvol communiceer, prettig samenwerk en professioneel
-                        handel richting studenten, collega’s en externe betrokkenen. Ook wordt benoemd dat studenten
-                        mij makkelijk benaderen bij hulpvragen en dat ik de juiste toon weet te vinden, ook in
-                        lastige gesprekken.
-                    </p>
-                    <p>
-                        De standaard gespreksleidraad sluit hierbij aan door aandacht te geven aan een veilige
-                        opening, open vragen, luisteren zonder oordeel en het samen maken van afspraken.
-                        Studentfeedback bevestigt dat studenten mij vertrouwen en het gevoel hebben dat zij bij
-                        mij terechtkunnen.
-                    </p>
-                    <p>
-                        Bewijs: collegafeedback, feedback van de teamdeskundige, de gespreksleidraad en de
-                        SLB-lesevaluatie.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>2. Pedagogisch competent</h2>
-                    <p>
-                        Mijn pedagogisch handelen is gericht op het welzijn, de zelfstandigheid en de ontwikkeling
-                        van studenten. Ik probeer signalen rond motivatie, aanwezigheid, studiegedrag, communicatie
-                        en persoonlijke omstandigheden vroegtijdig te herkennen en bespreekbaar te maken.
-                    </p>
-                    <p>
-                        Uit de feedback van de teamdeskundige blijkt dat ik studenten structureel en passend
-                        begeleid. Studenten weten mij te vinden, het welzijn van de student staat zichtbaar centraal
-                        en ik schakel passende ondersteuning in wanneer dat nodig is.
-                    </p>
-                    <p>
-                        Deze aanpak sluit aan bij het Plan van Aanpak Vroegsignalering en de standaard
-                        gespreksleidraad. Beide producten helpen om signalen eerder te herkennen, gesprekken
-                        gestructureerd te voeren en concrete vervolgafspraken te maken.
-                    </p>
-                    <p>
-                        Ook het BPV-lesprogramma van twintig weken ondersteunt mijn pedagogisch handelen. Studenten
-                        werken hierin aan beroepshouding, communicatie, planning, verantwoordelijkheid, initiatief
-                        en zelfreflectie. Het onderzoek onder stagebedrijven bevestigt dat deze vaardigheden
-                        belangrijk zijn voor succes tijdens stage.
-                    </p>
-                    <p>
-                        Mijn ontwikkelpunt is om studenten nog vaker coachend te begeleiden: minder snel oplossingen
-                        aanreiken en meer ruimte geven voor eigen keuzes, verantwoordelijkheid en reflectie.
-                    </p>
-                    <p>
-                        Bewijs: Plan van Aanpak Vroegsignalering, standaard gespreksleidraad, feedback
-                        teamdeskundige, beoordeling Wendy Martens, onderzoek stagebedrijven, BPV-lesprogramma en
-                        SLB-lesevaluatie.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>3. Vakinhoudelijk en didactisch competent</h2>
-                    <p>
-                        Binnen mijn lessen werk ik met structuur, duidelijke verwachtingen en gerichte feedback op
-                        studentwerk. Ik wil dat studenten begrijpen wat zij leren, waarom dit relevant is en hoe zij
-                        hun ontwikkeling kunnen aantonen. Bij projecten gebruiken we SCRUM om eigenaarschap,
-                        samenwerking en planning te stimuleren.
-                    </p>
-                    <p>
-                        Mijn vakinhoudelijke en didactische competentie komt ook naar voren in mijn bijdrage aan
-                        examinering en kwaliteitsbewaking. Vanuit de opleidingscommissie en vaststellingscommissie
-                        draag ik kritisch en inhoudelijk bij aan de kwaliteit en borging van onderwijs, examendossiers
-                        en examenprocessen.
-                    </p>
-                    <p>
-                        Ik werk bewust met de PDCA-cyclus om verbeteringen planmatig, cyclisch en onderbouwd aan
-                        te brengen. Signalen uit lessen, studentbegeleiding, examinering, collega-feedback en het
-                        werkveld gebruik ik om de kwaliteit van het onderwijs te versterken.
-                    </p>
-                    <p>
-                        Mijn onderzoek onder 38 stagebedrijven geeft concrete input voor curriculumontwikkeling,
-                        BPV-voorbereiding en technologische thema’s zoals Data/AI, Security, Cloud en DevOps.
-                        Deze werkveldinput vertaal ik naar het BPV-lesprogramma en actuele onderwijsinhoud.
-                    </p>
-                    <p>
-                        De master Applied Data Science helpt mij om AI, data en praktijkgericht onderzoek sterker
-                        te verbinden aan Software Development.
-                    </p>
-                    <p>
-                        Bewijs: examinering, kwaliteitszorg, opleidingscommissie, vaststellingscommissie,
-                        werkveldonderzoek, BPV-lesprogramma, PDCA-cyclus en professionalisering via Applied
-                        Data Science.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>4. Organisatorisch competent</h2>
-                    <p>
-                        Ik zorg voor structuur, overzicht en voortgang in mijn werkzaamheden. Dat geldt voor lessen,
-                        begeleiding, BPV-taken, overlegmomenten en kwaliteitsprocessen. Ik werk graag met duidelijke
-                        afspraken en vind het belangrijk dat processen navolgbaar zijn voor studenten en collega’s.
-                    </p>
-                    <p>
-                        In de feedback van mijn huidige manager worden mijn eigenaarschap, overzicht, proactieve
-                        houding en het tijdig en zorgvuldig uitvoeren van werkzaamheden benoemd. Ook wordt aangegeven
-                        dat ik knelpunten signaleer en initiatief neem om oplossingen te realiseren.
-                    </p>
-                    <p>
-                        De feedback van Gerald Muller bevestigt mijn organisatorische kracht. Hij benoemt dat ik
-                        als critical friend protocollaire afspraken ken en collega’s hierop aanspreek. Ook mijn
-                        planmatige manier van werken, prioriteren en kwaliteitsgerichtheid komen hierin naar voren.
-                    </p>
-                    <p>
-                        Het Plan van Aanpak Vroegsignalering is een concreet voorbeeld van mijn organisatorische
-                        competentie. Het plan brengt acties, fasering, rollen, verantwoordelijkheden en borging
-                        samen, onder andere via een signalenwijzer, rolverduidelijking, casusoverleg, digitaal
-                        logboek en evaluatie. Ook het werkveldonderzoek onder 38 stagebedrijven en het BPV-lesprogramma
-                        van 20 weken laten zien dat ik signalen omzet in onderbouwde verbetertrajecten en praktische
-                        onderwijsstructuren.
-                    </p>
-                    <p>
-                        Bewijs: feedback van mijn huidige manager, feedback van collega, Plan van Aanpak
-                        Vroegsignalering, werkveldonderzoek onder 38 stagebedrijven en BPV-lesprogramma week 1 t/m 20.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>5. Samenwerken met collega’s</h2>
-                    <p>
-                        Ik werk actief samen met collega’s en betrokken afdelingen. Daarbij benut ik kennis van
-                        anderen, maak ik gezamenlijke afspraken en stel ik het teamresultaat centraal. Goede
-                        samenwerking vraagt voor mij om open communicatie, duidelijke afspraken en de bereidheid
-                        om elkaar constructief aan te spreken.
-                    </p>
-                    <p>
-                        In de feedback van mijn huidige manager komt naar voren dat ik zichtbaar bijdraag aan
-                        gezamenlijke resultaten, samenwerking actief opzoek en opensta voor feedback en inbreng van
-                        collega’s. Ook mijn collega bevestigt dit beeld en beschrijft mij als collegiaal, respectvol,
-                        professioneel en gericht op het beste voor de student. Ook benoemt hij dat ik afspraken
-                        belangrijk vind en anderen daarop durf aan te spreken.
-                    </p>
-                    <p>
-                        De samenwerking rondom studentbegeleiding, vroegsignalering, het werkveldonderzoek en het
-                        BPV-lesprogramma laat zien dat ik individuele ervaring overdraagbaar maak naar het team.
-                        Zo ontstaan gezamenlijke werkwijzen rond begeleiding, beroepshouding, stagevaardigheden,
-                        soft skills en BPV-beoordeling.
-                    </p>
-                    <p>
-                        Bewijs: feedback van mijn huidige manager, collega en teamdeskundige, Plan van Aanpak
-                        Vroegsignalering, werkveldonderzoek en BPV-lesprogramma.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>6. Samenwerken met de omgeving</h2>
-                    <p>
-                        Als BPV-begeleider en docent onderhoud ik contact met ouders, leerbedrijven, het stagebureau
-                        en andere betrokkenen rondom de student. Ik zie het werkveld en de thuissituatie als
-                        belangrijke partners in de ontwikkeling van studenten. Een goede verbinding tussen opleiding,
-                        student en omgeving is essentieel voor studiesucces, stagegeschiktheid en beroepshouding.
-                    </p>
-                    <p>
-                        De feedback van de stagecoördinator bevestigt mijn betrokkenheid bij BPV-processen en mijn
-                        actieve bijdrage aan begeleiding en afstemming rondom studenten. Daarbij blijft rolafbakening
-                        belangrijk: heldere afspraken over verantwoordelijkheden voorkomen onduidelijkheid voor
-                        studenten, bedrijven en collega’s.
-                    </p>
-                    <p>
-                        Mijn onderzoek onder 38 stagebedrijven laat zien dat ik het werkveld actief betrek bij
-                        onderwijsontwikkeling. Bedrijven geven input over technische vaardigheden, maar ook over
-                        soft skills zoals zelfstandigheid, communicatie, samenwerken, verantwoordelijkheid en plannen.
-                        Deze inzichten vertaal ik naar het BPV-lesprogramma, waarin studenten worden voorbereid op
-                        contact met leerbedrijven, professionele gesprekken, verwachtingen, BPV-opdrachten en
-                        beoordelingscriteria.
-                    </p>
-                    <p>
-                        Ook de gespreksleidraad en feedback van de teamdeskundige laten zien dat ik ouders en andere
-                        betrokkenen meeneem wanneer dat nodig is. De BPV-lesevaluatie bevestigt dat studenten mijn
-                        begeleiding als betrouwbaar, bereikbaar en behulpzaam ervaren.
-                    </p>
-                    <p>
-                        Bewijs: feedback van de stagecoördinator en teamdeskundige, onderzoek onder 38 stagebedrijven,
-                        BPV-lesprogramma, gespreksleidraad en lesevaluatie BPV-begeleider.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>7. Reflectie en ontwikkeling</h2>
-                    <p>
-                        Ik vraag actief feedback en gebruik deze om mijn handelen te verbeteren. De zes
-                        feedbackbronnen geven mij een breed beeld van mijn functioneren: mijn manager kijkt naar
-                        teamontwikkeling en resultaat, collega-feedback naar samenwerking en professionaliteit, de
-                        teamdeskundige naar begeleiding en de commissies en stagecoördinatie naar kwaliteit,
-                        examinering en BPV.
-                    </p>
-                    <p>
-                        Uit deze feedback komt naar voren dat ik betrokken, professioneel, kritisch, kwaliteitsgericht
-                        en sterk studentgericht werk. Tegelijkertijd worden ontwikkelpunten zichtbaar, zoals technische
-                        verdieping, rolhelderheid binnen BPV, coachend begeleiden en het bewaken van tijd en
-                        prioriteiten.
-                    </p>
-                    <p>
-                        De ontwikkeling van het Plan van Aanpak Vroegsignalering en de gespreksleidraad laat zien
-                        dat ik feedback en praktijkervaring omzet in concrete verbetering. Ook het onderzoek onder
-                        38 stagebedrijven gebruik ik om keuzes rond curriculum, BPV, soft skills en technologische
-                        prioriteiten beter te onderbouwen.
-                    </p>
-                    <p>
-                        Het BPV-lesprogramma laat zien dat ik signalen niet alleen analyseer, maar vertaal naar
-                        onderwijsaanbod. De BPV- en SLB-evaluaties voegen studentperspectief toe en bevestigen mijn
-                        bereikbaarheid, duidelijkheid en betrokkenheid. Mijn master Applied Data Science ondersteunt
-                        mijn verdere ontwikkeling richting AI, data en praktijkgericht onderzoek.
-                    </p>
-                    <p>
-                        Bewijs: zes feedbackbronnen, Plan van Aanpak Vroegsignalering, gespreksleidraad,
-                        werkveldonderzoek, BPV-lesprogramma, BPV- en SLB-evaluaties en master Applied Data Science.
-                    </p>
-                </article>
-            </section>
-
-            <section class="container profile-grid">
-                <article class="profile-card">
-                    <h2>Onderwijsontwikkeling als bewijs</h2>
-                    <p>
-                        Het Plan van Aanpak Vroegsignalering, de gespreksleidraad en het BPV-lesprogramma laten
-                        zien dat ik praktijkervaring omzet in overdraagbare onderwijsproducten.
-                    </p>
-                    <p>
-                        De volledige uitwerking staat op de pagina Onderwijsontwikkeling.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>Onderzoek & innovatie als bewijs</h2>
-                    <p>
-                        Het onderzoek onder 38 stagebedrijven onderbouwt mijn bijdrage aan curriculumontwikkeling,
-                        BPV-voorbereiding en actuele technologische thema’s.
-                    </p>
-                    <p>
-                        De volledige uitwerking staat op de pagina Onderzoek & innovatie.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>Professionalisering</h2>
-                    <p>
-                        Mijn inschrijving voor de deeltijdmaster Master of Informatics - Applied Data Science
-                        sluit aan bij mijn ambitie om AI, data en praktijkgericht onderzoek sterker te verbinden
-                        aan het onderwijs.
-                    </p>
-                    <p>
-                        Deze professionalisering ondersteunt mijn ontwikkeling als onderzoekende en ontwikkelende
-                        onderwijsprofessional.
-                    </p>
-                </article>
-            </section>
-
-            <section class="container interactive-section">
-                <div class="interactive-copy">
-                    <h2>Persoonlijk ontwikkelingsplan</h2>
-                    <p>
-                        Mijn POP is gebaseerd op feedback, studentervaringen, werkveldinput en mijn eigen
-                        reflectie. De ontwikkeldoelen richten zich op het versterken van mijn handelen als docent,
-                        begeleider en onderwijsontwikkelaar.
-                    </p>
-                </div>
-
-                <div class="interactive-panel">
-                    <h3>Belangrijkste ontwikkeldoelen</h3>
-                    <ul class="doc-list">
-                        <li>Coachend begeleiden versterken.</li>
-                        <li>Vroegsignalering borgen binnen het team.</li>
-                        <li>Technische verdieping rond AI, data, security, cloud en DevOps.</li>
-                        <li>BPV-rol helder positioneren.</li>
-                        <li>Curriculum en soft skills versterken.</li>
-                        <li>Studentfeedback structureel benutten.</li>
-                        <li>Applied Data Science verbinden aan onderwijsinnovatie.</li>
-                        <li>Roos van Leary bewuster inzetten in begeleiding.</li>
-                    </ul>
-                </div>
-            </section>
-
-        </main>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2026 Selim Serik | ICT-docent</p>
     </div>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© 2026 Selim Serik | ICT-docent</p>
-        </div>
-    </footer>
+</footer>
 
 </body>
 </html>
