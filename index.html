@@ -22,123 +22,148 @@
         .stats-section-light .stat-card p {
             color: #4f6475;
         }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .profile-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
     </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
-        </div>
-    </header>
-
-    <div class="page-layout">
-        <aside class="sidebar">
-
-            <div class="sidebar-profile">
-                <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
-            </div>
-
-            <div class="sidebar-brand"></div>
-
-            <nav class="site-nav" aria-label="Hoofdmenu">
-                <ul>
-           <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="over-mij.html">Over mij</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
-                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
-                    <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="contact.html" aria-current="page">Contact</a></li>
-                </ul>
-                </ul>
-            </nav>
-        </aside>
-
-        <main id="main-content" class="main-content">
-
-        
-            
-
-            <section class="container interactive-section">
-                <div class="interactive-copy">
-                    <h2>Korte leeswijzer</h2>
-                    <p>
-                        Deze Home-pagina is bedoeld als startpunt van mijn professionele portfolio. Gebruik het
-                        menu links om gericht naar een onderdeel te gaan. Mijn persoonlijke profiel staat op
-                        <strong>Over mij</strong>, mijn competentieontwikkeling op <strong>Portfolio</strong>
-                        en de onderbouwing daarvan op <strong>Bewijsstukken</strong>.
-                    </p>
-                    <p>
-                        Daarnaast zijn ook mijn <strong>CV</strong>, mijn bijdrage aan
-                        <strong>Onderwijsontwikkeling</strong>, mijn werk rondom
-                        <strong>Onderzoek & innovatie</strong> en mijn <strong>Contactgegevens</strong>
-                        opgenomen. Zo geeft deze website een compleet overzicht van mijn rol, ontwikkeling,
-                        onderwijsproducten, onderzoek en professionele bereikbaarheid.
-                    </p>
-                </div>
-            </section>
-
-            <section class="container profile-grid">
-                <article class="profile-card">
-                    <h2>Over mij</h2>
-                    <p>
-                        Op deze pagina staat mijn professionele profiel centraal: mijn achtergrond, rol als docent,
-                        SLB’er en BPV-begeleider en mijn ontwikkelrichting binnen het ICT-onderwijs.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>Portfolio</h2>
-                    <p>
-                        Hier werk ik mijn bekwaamheid uit aan de hand van SBL-competenties, reflectie,
-                        feedbackbronnen, ontwikkeldoelen en mijn bijdrage richting een senior-docentrol.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>Onderwijsontwikkeling</h2>
-                    <p>
-                        Deze pagina beschrijft mijn onderwijsproducten, zoals vroegsignalering,
-                        de gespreksleidraad en het BPV-lesprogramma van twintig weken.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>Onderzoek & innovatie</h2>
-                    <p>
-                        Hier staat mijn werkveldonderzoek centraal, inclusief de verbinding met AI, data,
-                        security, cloud, DevOps en toekomstbestendig ICT-onderwijs.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>Bewijsstukken</h2>
-                    <p>
-                        Op deze pagina staan de volledige bewijsmatrix, bijlagenlijst en klikbare documenten
-                        die mijn professionele ontwikkeling onderbouwen.
-                    </p>
-                </article>
-
-                <article class="profile-card">
-                    <h2>Contact</h2>
-                    <p>
-                        Voor vragen, toelichting of hulp rondom mijn portfolio, onderwijsontwikkeling,
-                        onderzoek of bewijsstukken kun je contact met mij opnemen.
-                    </p>
-                </article>
-            </section>
-
-        </main>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
     </div>
+</header>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© 2026 Selim Serik | ICT-docent</p>
+<div class="page-layout">
+    <aside class="sidebar">
+
+        <div class="sidebar-profile">
+            <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
         </div>
-    </footer>
+
+        <div class="sidebar-brand"></div>
+
+        <nav class="site-nav" aria-label="Hoofdmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="over-mij.html">Over mij</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
+                <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
+                <li><a href="bewijsstukken.html">Bewijsstukken</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="main-content" class="main-content">
+
+        <section class="container interactive-section">
+            <div class="interactive-copy">
+                <h2>Korte leeswijzer</h2>
+                <p>
+                    Deze Home-pagina is bedoeld als startpunt van mijn professionele portfolio. Gebruik het
+                    menu links om gericht naar een onderdeel te gaan. Mijn persoonlijke profiel staat op
+                    <strong>Over mij</strong>, mijn competentieontwikkeling op <strong>Portfolio</strong>
+                    en de onderbouwing daarvan op <strong>Bewijsstukken</strong>.
+                </p>
+                <p>
+                    Daarnaast zijn ook mijn <strong>CV</strong>, mijn bijdrage aan
+                    <strong>Onderwijsontwikkeling</strong>, mijn werk rondom
+                    <strong>Onderzoek & innovatie</strong> en mijn <strong>Contactgegevens</strong>
+                    opgenomen. Zo geeft deze website een compleet overzicht van mijn rol, ontwikkeling,
+                    onderwijsproducten, onderzoek en professionele bereikbaarheid.
+                </p>
+            </div>
+        </section>
+
+        <section class="container profile-grid">
+            <article class="profile-card">
+                <h2>Over mij</h2>
+                <p>
+                    Op deze pagina staat mijn professionele profiel centraal: mijn achtergrond, rol als docent,
+                    SLB’er en BPV-begeleider en mijn ontwikkelrichting binnen het ICT-onderwijs.
+                </p>
+            </article>
+
+            <article class="profile-card">
+                <h2>Portfolio</h2>
+                <p>
+                    Hier werk ik mijn bekwaamheid uit aan de hand van SBL-competenties, reflectie,
+                    feedbackbronnen, ontwikkeldoelen en mijn bijdrage richting een senior-docentrol.
+                </p>
+            </article>
+
+            <article class="profile-card">
+                <h2>Onderwijsontwikkeling</h2>
+                <p>
+                    Deze pagina beschrijft mijn onderwijsproducten, zoals vroegsignalering,
+                    de gespreksleidraad en het BPV-lesprogramma van twintig weken.
+                </p>
+            </article>
+
+            <article class="profile-card">
+                <h2>Onderzoek & innovatie</h2>
+                <p>
+                    Hier staat mijn werkveldonderzoek centraal, inclusief de verbinding met AI, data,
+                    security, cloud, DevOps en toekomstbestendig ICT-onderwijs.
+                </p>
+            </article>
+
+            <article class="profile-card">
+                <h2>Bewijsstukken</h2>
+                <p>
+                    Op deze pagina staan de volledige bewijsmatrix, bijlagenlijst en klikbare documenten
+                    die mijn professionele ontwikkeling onderbouwen.
+                </p>
+            </article>
+
+            <article class="profile-card">
+                <h2>CV</h2>
+                <p>
+                    Op deze pagina vind je een chronologisch overzicht van mijn loopbaan en opleidingen. 
+                    Van mijn fundament als beroepsmilitair tot mijn brede ervaring als docent, examencoördinator 
+                    en projectlid binnen het ROC van Twente. Daarnaast biedt dit overzicht inzicht in mijn 
+                    technische vaardigheden, talenkennis en nevenactiviteiten.
+                </p>
+            </article>
+
+            <article class="profile-card">
+                <h2>Contact</h2>
+                <p>
+                    Voor vragen, toelichting of hulp rondom mijn portfolio, onderwijsontwikkeling,
+                    onderzoek of bewijsstukken kun je contact met mij opnemen.
+                </p>
+            </article>
+        </section>
+
+    </main>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2026 Selim Serik | ICT-docent</p>
+    </div>
+</footer>
 
 </body>
 </html>
