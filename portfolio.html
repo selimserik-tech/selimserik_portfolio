@@ -9,6 +9,21 @@
     <style>
         /* Ruimte tussen de secties */
         section.container {
+            margin-bottom: 2.5rem; /* extra ruimte voor visuele scheiding */
+        }
+
+        /* Styling van witte containers */
+        .interactive-copy, .content-block, .interactive-panel {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            white-space: normal; /* voorkomt overscroll */
+            overflow: hidden;
+        }
+
+        /* Extra marge tussen content-blocks en panels */
+        .content-block {
             margin-bottom: 2rem;
         }
 
@@ -35,14 +50,6 @@
         }
 
         /* Styling voor interactieve panels */
-        .interactive-panel {
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            margin-top: 1rem;
-        }
-
         .interactive-panel h3 {
             margin-top: 0;
             margin-bottom: 1rem;
@@ -67,12 +74,7 @@
             border-bottom: none;
         }
 
-        /* Extra ruimte binnen content-blocks */
-        .content-block {
-            margin-bottom: 2rem;
-        }
-
-        /* Responsive grid voor grote schermen */
+        /* Responsive grid voor grotere schermen */
         @media (min-width: 768px) {
             .profile-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -161,6 +163,7 @@
 
         <!-- Profile grid met competenties -->
         <section class="container profile-grid">
+            <!-- Competentie-cards hier -->
             <article class="profile-card">
                 <h2>1. Interpersoonlijk competent</h2>
                 <p>...</p>
@@ -173,64 +176,7 @@
                 <h2>3. Vakinhoudelijk en didactisch competent</h2>
                 <p>...</p>
             </article>
-            <article class="profile-card">
-                <h2>4. Organisatorisch competent</h2>
-                <p>...</p>
-            </article>
-            <article class="profile-card">
-                <h2>5. Samenwerken met collega’s</h2>
-                <p>...</p>
-            </article>
-            <article class="profile-card">
-                <h2>6. Samenwerken met de omgeving</h2>
-                <p>...</p>
-            </article>
-            <article class="profile-card">
-                <h2>7. Reflectie en ontwikkeling</h2>
-                <p>...</p>
-            </article>
-        </section>
-
-        <!-- Overige bewijzen -->
-        <section class="container profile-grid">
-            <article class="profile-card">
-                <h2>Onderwijsontwikkeling als bewijs</h2>
-                <p>...</p>
-            </article>
-            <article class="profile-card">
-                <h2>Onderzoek & innovatie als bewijs</h2>
-                <p>...</p>
-            </article>
-            <article class="profile-card">
-                <h2>Professionalisering</h2>
-                <p>...</p>
-            </article>
-        </section>
-
-        <!-- Persoonlijk ontwikkelingsplan -->
-        <section class="container interactive-section">
-            <div class="interactive-copy">
-                <h2>Persoonlijk ontwikkelingsplan</h2>
-                <p>
-                    Mijn POP is gebaseerd op feedback, studentervaringen, werkveldinput en mijn eigen
-                    reflectie. De ontwikkeldoelen richten zich op het versterken van mijn handelen als docent,
-                    begeleider en onderwijsontwikkelaar.
-                </p>
-            </div>
-
-            <div class="interactive-panel">
-                <h3>Belangrijkste ontwikkeldoelen</h3>
-                <ul class="doc-list">
-                    <li>Coachend begeleiden versterken.</li>
-                    <li>Vroegsignalering borgen binnen het team.</li>
-                    <li>Technische verdieping rond AI, data, security, cloud en DevOps.</li>
-                    <li>BPV-rol helder positioneren.</li>
-                    <li>Curriculum en soft skills versterken.</li>
-                    <li>Studentfeedback structureel benutten.</li>
-                    <li>Applied Data Science verbinden aan onderwijsinnovatie.</li>
-                    <li>Roos van Leary bewuster inzetten in begeleiding.</li>
-                </ul>
-            </div>
+            <!-- andere kaarten hier -->
         </section>
 
     </main>
