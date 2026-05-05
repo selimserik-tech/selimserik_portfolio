@@ -1,7 +1,9 @@
-// Portfolio Selim Serik 2026
-// Script voor:
-// 1. Visualiseren van lesevaluaties via Chart.js
-// 2. Tonen van klikbare bijlagen op bewijsstukken.html
+/**
+ * Portfolio Selim Serik 2026
+ * Script voor:
+ * 1. Visualiseren van lesevaluaties via Chart.js
+ * 2. Tonen van klikbare bijlagen op bewijsstukken.html
+ */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -107,19 +109,48 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * 2. Bijlage-viewer op bewijsstukken.html
      */
-    const attachmentBtns = document.querySelectorAll('.attachment-btn');
-    const viewer = document.getElementById('attachmentViewer');
-    const titleEl = document.getElementById('selectedAttachmentTitle');
-    const openNewTab = document.getElementById('openAttachmentNewTab');
+    const attachmentButtons = document.querySelectorAll(".attachment-btn");
+    const attachmentViewer = document.getElementById("attachmentViewer");
+    const selectedAttachmentTitle = document.getElementById("selectedAttachmentTitle");
+    const selectedAttachmentPath = document.getElementById("selectedAttachmentPath");
+    const viewerSection = document.getElementById("bijlage-viewer-section");
+    const openAttachmentNewTab = document.getElementById("openAttachmentNewTab");
 
-    attachmentBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const file = btn.getAttribute('data-file');
-            const title = btn.getAttribute('data-title');
+    if (openAttachmentNewTab) {
+        openAttachmentNewTab.style.display = "none";
+    }
 
-            viewer.src = file;
-            titleEl.textContent = title;
-            openNewTab.href = file;
+    if (attachmentButtons.length && attachmentViewer && viewerSection) {
+        attachmentButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const file = button.getAttribute("data-file");
+                const title = button.getAttribute("data-title");
+
+                if (!file) {
+                    return;
+                }
+
+                attachmentViewer.src = file;
+
+                if (selectedAttachmentTitle) {
+                    selectedAttachmentTitle.textContent = title || "Geselecteerde bijlage";
+                }
+
+                if (selectedAttachmentPath) {
+                    selectedAttachmentPath.textContent = file;
+                }
+
+                if (openAttachmentNewTab) {
+                    openAttachmentNewTab.href = file;
+                    openAttachmentNewTab.style.display = "inline-block";
+                }
+
+                viewerSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
         });
-    });
+    }
+
 });
