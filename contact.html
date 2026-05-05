@@ -9,26 +9,32 @@
     <style>
         /* Algemene sectie styling */
         section.container {
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem; /* minder witte ruimte onder sectie */
+            padding: 1rem 0;
         }
 
-        /* Witte achtergrond voor interactieve panels en contactgegevens */
+        /* Witte achtergrond voor panels en contactgegevens */
         .interactive-copy,
         .interactive-panel,
         .about-details {
             background-color: #ffffff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            white-space: normal;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
             overflow: hidden;
         }
 
         /* Kopjes in panel */
+        .interactive-copy h2 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.6rem;
+        }
+
         .interactive-panel h3,
         .about-details h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
             font-size: 1.2rem;
             color: #2c3e50;
         }
@@ -42,7 +48,7 @@
         }
 
         .interactive-panel ul.doc-list li {
-            padding: 0.75rem 0;
+            padding: 0.5rem 0;
             border-bottom: 1px solid #e0e0e0;
             color: #2c3e50;
         }
@@ -54,16 +60,16 @@
         /* Grid voor contactgegevens */
         .about-details {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.75rem;
+            margin-top: 0.75rem;
         }
 
         .about-details div {
-            padding: 0.75rem;
+            padding: 0.5rem;
             border-radius: 8px;
             background-color: #ffffff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
 
         .about-details a {
@@ -73,6 +79,11 @@
 
         .about-details a:hover {
             text-decoration: underline;
+        }
+
+        /* Extra compacte spacing voor hele pagina */
+        .page-layout {
+            padding: 1rem;
         }
     </style>
 </head>
