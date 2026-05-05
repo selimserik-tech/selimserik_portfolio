@@ -7,48 +7,50 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
     <style>
-        /* Algemene sectie styling */
+        /* Sectie styling */
         section.container {
-            margin-bottom: 1.5rem; /* minder witte ruimte onder sectie */
-            padding: 1rem 0;
+            margin-bottom: 1rem;
+            padding: 0;
         }
 
-        /* Witte achtergrond voor panels en contactgegevens */
+        /* Witte panels */
         .interactive-copy,
         .interactive-panel,
         .about-details {
-            background-color: #ffffff;
+            background-color: #fff;
             border-radius: 10px;
             padding: 1rem;
             box-shadow: 0 1px 4px rgba(0,0,0,0.06);
             overflow: hidden;
         }
 
-        /* Kopjes in panel */
+        /* Kopjes */
         .interactive-copy h2 {
-            margin-top: 0;
-            margin-bottom: 0.75rem;
+            margin: 0 0 0.5rem 0;
             font-size: 1.6rem;
         }
 
-        .interactive-panel h3,
-        .about-details h3 {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
+        .interactive-copy p {
+            margin-bottom: 0.75rem;
+        }
+
+        .interactive-panel h3 {
+            margin: 0 0 0.5rem 0;
             font-size: 1.2rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.25rem;
             color: #2c3e50;
         }
 
-        /* Lijst in 'Contact over' */
+        /* Lijst contact onderwerpen */
         .interactive-panel ul.doc-list {
             list-style: none;
-            padding-left: 0;
+            padding: 0;
             margin: 0;
-            border-top: 1px solid #e0e0e0;
         }
 
         .interactive-panel ul.doc-list li {
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
             border-bottom: 1px solid #e0e0e0;
             color: #2c3e50;
         }
@@ -57,18 +59,18 @@
             border-bottom: none;
         }
 
-        /* Grid voor contactgegevens */
+        /* Contactgegevens grid */
         .about-details {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 0.75rem;
-            margin-top: 0.75rem;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
         }
 
         .about-details div {
             padding: 0.5rem;
             border-radius: 8px;
-            background-color: #ffffff;
+            background-color: #fff;
             box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
 
@@ -81,9 +83,18 @@
             text-decoration: underline;
         }
 
-        /* Extra compacte spacing voor hele pagina */
         .page-layout {
-            padding: 1rem;
+            padding: 0.5rem;
+        }
+
+        .main-content {
+            margin-left: 220px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -115,18 +126,15 @@
     </aside>
 
     <main id="main-content" class="main-content">
-  <section class="container interactive-section">
-                <div class="interactive-copy">
-                          <article class="profile-card">
-                  
-                    <h2>Neem contact op</h2>
-                    <p>
-                            Heb je vragen over mijn portfolio, professionele ontwikkeling, onderwijsontwikkeling,
-                            BPV, SLB, werkveldonderzoek of bewijsstukken? Neem gerust contact met mij op.
-                            Ik licht mijn keuzes graag toe.
-                    </p>
-                   </article>
-                         <div class="interactive-panel">
+        <section class="container interactive-copy">
+            <h2>Neem contact op</h2>
+            <p>
+                Heb je vragen over mijn portfolio, professionele ontwikkeling, onderwijsontwikkeling,
+                BPV, SLB, werkveldonderzoek of bewijsstukken? Neem gerust contact met mij op.
+                Ik licht mijn keuzes graag toe.
+            </p>
+
+            <div class="interactive-panel">
                 <h3>Contact over</h3>
                 <ul class="doc-list">
                     <li>Mijn professionele portfolio en SBL-competenties.</li>
@@ -135,19 +143,15 @@
                     <li>Werkveldonderzoek en aansluiting op de beroepspraktijk.</li>
                     <li>Bewijsstukken, bijlagen en bewijsmatrix.</li>
                 </ul>
-                  </article>
             </div>
-            <div">
+
+            <div class="about-details">
                 <div><strong>Naam:</strong> Selim Serik</div>
                 <div><strong>E-mail:</strong> <a href="mailto:sserik@rocvantwente.nl">sserik@rocvantwente.nl</a></div>
                 <div><strong>Telefoon:</strong> <a href="tel:+31622225454">06-22225454</a></div>
                 <div><strong>Website:</strong> <a href="https://www.slimart.nl" target="_blank" rel="noopener">www.slimart.nl</a></div>
             </div>
-                </div>
-            </section>
-        
-
-
+        </section>
     </main>
 </div>
 
