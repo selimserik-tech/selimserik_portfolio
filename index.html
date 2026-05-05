@@ -42,6 +42,27 @@
             transform: translateY(-4px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
+
+        /* Sidebar menu hover */
+        .site-nav ul li a {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .site-nav ul li a:hover {
+            background-color: #dce6f1;
+            color: #1a2a3a;
+        }
+
+        /* Huidige pagina niet standaard donker */
+        .site-nav ul li a[aria-current="page"] {
+            background-color: transparent;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
@@ -143,7 +164,7 @@
                     Op deze pagina vind je een chronologisch overzicht van mijn loopbaan en opleidingen. 
                     Van mijn fundament als beroepsmilitair tot mijn brede ervaring als docent, examencoördinator 
                     en projectlid binnen het ROC van Twente. Daarnaast biedt dit overzicht inzicht in mijn 
-                    (technische) vaardigheden en  talenkennis.
+                    (technische) vaardigheden en talenkennis.
                 </p>
             </article>
 
