@@ -6,57 +6,71 @@
     <title>Bewijsstukken | Selim Serik</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    <style>
+        /* Styling voor de “kaart”-look */
+        .highlight-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        .highlight-section h1, .highlight-section h2 {
+            margin-top: 0;
+        }
+        .doc-list {
+            padding-left: 1rem;
+        }
+        .doc-list li {
+            margin-bottom: 0.5rem;
+        }
+        .attachment-btn {
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-    <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
-    </div>
-</header>
-
-<div class="page-layout">
-    <aside class="sidebar">
-        <div class="sidebar-profile">
-            <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Home">Portfolio | Selim Serik</a>
         </div>
+    </header>
 
-        <div class="sidebar-brand"></div>
-
-        <nav class="site-nav" aria-label="Hoofdmenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="over-mij.html">Over mij</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
-                <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
-                <li><a href="bewijsstukken.html" aria-current="page">Bewijsstukken</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <main id="main-content" class="main-content">
-
-        <!-- Hero Section -->
-        <section class="hero container">
-            <div class="overlay">
-                <div class="hero-copy">
-                    <p class="eyebrow">Bewijsstukken | Bewijsmatrix | Bijlagen</p>
-                    <h1>Bewijsstukken bij mijn professionele ontwikkeling</h1>
-                    <p>
-                        Op deze pagina staan de bewijsstukken die mijn professionele handelen onderbouwen.
-                        De bewijsmatrix koppelt de SBL-competenties aan feedback, evaluaties, onderwijsproducten,
-                        werkveldonderzoek en professionalisering.
-                    </p>
-                </div>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <div class="sidebar-profile">
+                <img src="assets/selim.jpg" alt="Portretfoto van Selim Serik" class="sidebar-photo">
             </div>
-        </section>
+            <nav class="site-nav" aria-label="Hoofdmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="over-mij.html">Over mij</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="onderwijsontwikkeling.html">Onderwijsontwikkeling</a></li>
+                    <li><a href="onderzoek-innovatie.html">Onderzoek & innovatie</a></li>
+                    <li><a href="bewijsstukken.html" aria-current="page">Bewijsstukken</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-        <!-- Samenhang Portfolio & Bewijsstukken -->
-        <section class="container interactive-section">
-            <div class="interactive-copy">
+        <main id="main-content" class="main-content">
+
+            <!-- Intro / Hero -->
+            <section class="container highlight-section">
+                <p class="eyebrow">BEWIJSSTUKKEN | BEWIJSMATRIX | BIJLAGEN</p>
+                <h1>Bewijsstukken bij mijn professionele ontwikkeling</h1>
+                <p>
+                    Op deze pagina staan de bewijsstukken die mijn professionele handelen onderbouwen.
+                    De bewijsmatrix koppelt de SBL-competenties aan feedback, evaluaties,
+                    onderwijsproducten, werkveldonderzoek en professionalisering.
+                </p>
+            </section>
+
+            <!-- Samenhang tussen portfolio & bewijsstukken -->
+            <section class="container highlight-section">
                 <h2>Samenhang tussen portfolio en bewijsstukken</h2>
                 <p>
                     De bewijsstukken onderbouwen mijn professionele handelen vanuit meerdere perspectieven:
@@ -67,23 +81,20 @@
                     Daarmee ontstaat een breed en navolgbaar beeld van mijn bekwaamheid, ontwikkelpunten
                     en bijdrage aan de opleiding Software Development.
                 </p>
-            </div>
+                <div class="interactive-panel">
+                    <h3>Belangrijkste lijnen</h3>
+                    <ul class="doc-list">
+                        <li>Feedback toont samenwerking, professionaliteit en kwaliteitsgericht werken.</li>
+                        <li>Onderwijsproducten tonen structurele verbetering van begeleiding en BPV-voorbereiding.</li>
+                        <li>Werkveldonderzoek toont aansluiting op actuele beroepspraktijk.</li>
+                        <li>Studentenevaluaties tonen waardering van begeleiding en ontwikkelrichting.</li>
+                        <li>Professionalisering toont de verbinding met AI, data en onderwijsinnovatie.</li>
+                    </ul>
+                </div>
+            </section>
 
-            <div class="interactive-panel">
-                <h3>Belangrijkste lijnen</h3>
-                <ul class="doc-list">
-                    <li>Feedback toont samenwerking, professionaliteit en kwaliteitsgericht werken.</li>
-                    <li>Onderwijsproducten tonen structurele verbetering van begeleiding en BPV-voorbereiding.</li>
-                    <li>Werkveldonderzoek toont aansluiting op actuele beroepspraktijk.</li>
-                    <li>Studentenevaluaties tonen waardering van begeleiding en ontwikkelrichting.</li>
-                    <li>Professionalisering toont de verbinding met AI, data en onderwijsinnovatie.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Doel en samenvatting bewijsstukken -->
-        <section class="container about-section">
-            <div class="content-block">
+            <!-- Doel van de bewijsstukken -->
+            <section class="container highlight-section">
                 <h2>Doel van deze bewijsstukken</h2>
                 <p>
                     De bewijsstukken maken zichtbaar hoe mijn ontwikkeling als onderwijsprofessional wordt
@@ -95,123 +106,67 @@
                     zich op de concrete bewijsstukken: de bewijsmatrix, de bijlagenlijst en de klikbare
                     documenten.
                 </p>
+            </section>
 
-                <h2>Samenvatting van de bewijsstukken</h2>
-                <p>
-                    De feedback en aanvullende documenten geven een consistent beeld. Mijn sterke punten
-                    liggen bij studentgerichtheid, pedagogische betrokkenheid, professionele houding,
-                    samenwerking, eigenaarschap en kwaliteitsgericht werken.
-                </p>
-                <p>
-                    Daarnaast laten de bewijsstukken zien dat ik signalen uit de praktijk omzet in concrete
-                    verbeteringen, zoals vroegsignalering, een gespreksleidraad, werkveldonderzoek en een
-                    BPV-lesprogramma.
-                </p>
-
-                <h2>Belangrijkste bewijsstukken</h2>
-                <ul class="doc-list">
-                    <li>Beoordeling manager</li>
-                    <li>Feedback collega</li>
-                    <li>Feedback teamdeskundige</li>
-                    <li>Feedback stagecoördinator BPV</li>
-                    <li>Feedback opleidingscommissie en vaststellingscommissie</li>
-                    <li>Lesevaluaties BPV en SLB</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Bewijsmatrix -->
-        <section id="bewijsmatrix" class="container interactive-section">
-            <div class="interactive-copy">
+            <!-- Volledige bewijsmatrix -->
+            <section class="container highlight-section">
                 <h2>Volledige bewijsmatrix</h2>
                 <p>
                     De bewijsmatrix laat zien welke bewijsstukken mijn bekwaamheid per competentie
                     onderbouwen. De matrix verbindt mijn handelen met feedback, ontwikkelde producten,
                     onderzoek, studentervaringen en professionalisering.
                 </p>
-            </div>
-        </section>
+            </section>
 
-        <!-- Bijlagenlijst -->
-        <section id="bijlagenlijst" class="container about-section">
-            <div class="content-block">
+            <!-- Volledige bijlagenlijst -->
+            <section class="container highlight-section">
                 <h2>Volledige bijlagenlijst</h2>
                 <p>
                     Hieronder staan de bijlagen die mijn professionele ontwikkeling onderbouwen.
-                    Klik op <strong>Bekijk bijlage</strong> om een document onderaan deze pagina
-                    in de documentviewer te openen.
+                    Klik op <strong>Bekijk bijlage</strong> om een document in de viewer te openen.
                 </p>
-                <p>
-                    Wil je een document groter bekijken? Gebruik dan de knop
-                    <strong>Open in nieuw tabblad</strong> bij de documentviewer.
-                </p>
-            </div>
-        </section>
 
-        <!-- Alle bijlagen in profile-grid -->
-        <section class="container profile-grid">
-            <!-- Bijlage 1 t/m 13 cards blijven hier onveranderd -->
-            <!-- Voorbeeld van een card -->
-            <article class="profile-card">
-                <h2>Bijlage 1</h2>
-                <p><strong>Beoordelingsgesprek manager</strong></p>
-                <p>Beoordeling van functioneren, samenwerking, eigenaarschap, resultaatgerichtheid en zelfontwikkeling.</p>
-                <button class="btn btn-secondary attachment-btn"
-                        data-title="Bijlage 1 - Beoordelingsgesprek manager"
-                        data-file="assets/beoordelingsgesprek manager.pdf">
-                    Bekijk bijlage
-                </button>
-            </article>
-            <!-- Herhaal de rest van de bijlagencards zoals eerder -->
-        </section>
+                <div class="profile-grid">
+                    <!-- Bijlage 1 -->
+                    <article class="profile-card">
+                        <h2>Bijlage 1</h2>
+                        <p><strong>Beoordelingsgesprek manager</strong></p>
+                        <p>Beoordeling van functioneren, samenwerking, eigenaarschap, resultaatgerichtheid en zelfontwikkeling.</p>
+                        <button class="btn btn-secondary attachment-btn" data-title="Bijlage 1 - Beoordelingsgesprek manager" data-file="assets/beoordelingsgesprek manager.pdf">Bekijk bijlage</button>
+                    </article>
 
-        <!-- Viewer Section -->
-        <section id="bijlage-viewer-section" class="container attachment-viewer-section">
-            <div class="interactive-section">
-                <div class="interactive-copy">
-                    <h2 id="selectedAttachmentTitle">Geselecteerde bijlage</h2>
-                    <p>
-                        Klik hierboven op een bijlage om het document hier op dezelfde pagina te tonen.
-                        De viewer is vergroot zodat PDF-documenten beter leesbaar zijn.
-                    </p>
+                    <!-- Bijlage 2 -->
+                    <article class="profile-card">
+                        <h2>Bijlage 2</h2>
+                        <p><strong>Feedback Bert ten Kate - stagebureau</strong></p>
+                        <p>Feedback over BPV, samenwerking rond stageprocessen en aandacht voor rolafbakening.</p>
+                        <button class="btn btn-secondary attachment-btn" data-title="Bijlage 2 - Feedback Bert ten Kate" data-file="assets/Feedbackformulier_stagebureau Bert ten Kate.pdf">Bekijk bijlage</button>
+                    </article>
 
-                    <div class="viewer-actions">
-                        <a id="openAttachmentNewTab"
-                           class="btn btn-primary"
-                           href="#"
-                           target="_blank"
-                           rel="noopener">
-                            Open in nieuw tabblad
-                        </a>
-                    </div>
+                    <!-- Voeg alle overige bijlagen 3 t/m 13 hier op dezelfde manier toe -->
                 </div>
+            </section>
 
-                <div class="interactive-panel">
-                    <h3>Documentviewer</h3>
-                    <p id="selectedAttachmentPath" class="selected-file">
-                        Nog geen bijlage geselecteerd.
-                    </p>
+            <!-- Documentviewer -->
+            <section class="container highlight-section">
+                <h2>Geselecteerde bijlage</h2>
+                <p>Klik op een bijlage hierboven om het document hier op dezelfde pagina te tonen. De viewer is vergroot zodat PDF-documenten beter leesbaar zijn.</p>
+                <div class="viewer-actions">
+                    <a id="openAttachmentNewTab" class="btn btn-primary" href="#" target="_blank" rel="noopener">Open in nieuw tabblad</a>
                 </div>
-            </div>
+                <div class="attachment-frame-wrapper">
+                    <iframe id="attachmentViewer" class="attachment-viewer" src="" title="Geselecteerde bijlage"></iframe>
+                </div>
+            </section>
 
-            <div class="attachment-frame-wrapper">
-                <iframe
-                    id="attachmentViewer"
-                    class="attachment-viewer"
-                    src=""
-                    title="Geselecteerde bijlage">
-                </iframe>
-            </div>
-        </section>
-
-    </main>
-</div>
-
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <p>© 2026 Selim Serik | ICT-docent</p>
+        </main>
     </div>
-</footer>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Selim Serik | ICT-docent</p>
+        </div>
+    </footer>
 
 </body>
 </html>
